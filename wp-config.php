@@ -59,7 +59,7 @@ define('NONCE_SALT',       '-9mC|5ar||e/yin*^U?zhjQ<iU(W`vbYQKb3_o|f+tMxBR,Q|3] 
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+$table_prefix  = 'bms_';
 
 /**
  * For developers: WordPress debugging mode.
@@ -68,7 +68,7 @@ $table_prefix  = 'wp_';
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* That's all, stop editing! Happy blogging. */
 

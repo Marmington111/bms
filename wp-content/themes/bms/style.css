@@ -19,8 +19,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 >>> COLOR PALLET
 ----------------------------------------------------------------
-:#73B0FF;blue
-:#BFDBFF;light-blue
+:#2c86ba;blue
+:68C8FF;light-blue
 :#341E4C;purple
 --------------------------------------------------------------*/
 
@@ -515,7 +515,7 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: #73B0FF;
+	color: #2c86ba;
 	text-decoration: none;
 }
 
@@ -543,7 +543,6 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
     background: #fff;
-    border-bottom: 1px solid #efefef;
     clear: both;
     display: block;
     float: left;
@@ -594,7 +593,7 @@ a:active {
 .main-navigation ul ul {
     background: #fff;
     /*background: hsl(0, 0%, 30%);*/
-    border-top: 2px solid #73B0FF;
+    border-top: 2px solid #2c86ba;
     display: none;
     float: left;
     padding: 0;
@@ -605,7 +604,7 @@ a:active {
 }
 .main-navigation ul ul ul {
 	background: #efefef;
-	border-top: 2px solid #bfdbff;
+	border-top: 2px solid 68C8FF;
 	left: -999em;
 	top: -2px;
 }
@@ -622,14 +621,14 @@ a:active {
 }
 
 .main-navigation li:hover > a {
-    border-bottom:1px solid #BFDBFF;/*light-blue*/
+    border-bottom:1px solid 68C8FF;/*light-blue*/
 }
 
 .main-navigation ul ul :hover > a {
 }
 
 .main-navigation ul ul ul a:hover {
-	background:#73B0FF;
+	background:#2c86ba;
 }
 
 .main-navigation ul li:hover > ul {
@@ -649,12 +648,12 @@ a:active {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_item > a:hover,
 .main-navigation .current-menu-item > a:hover {
-    background: #BFDBFF;
+    background: 68C8FF;
     color: #fff;
 }
 
 .main-navigation .current_page_ancestor {
-    background: #bfdbff;
+    background: 68C8FF;
     color:#fff;
     /*background: hsl(0, 0%, 30%);*/
 }
@@ -675,7 +674,7 @@ a:active {
 .main-navigation .current_page_parent .current_page_item > a {
     color: #fff;
     color: hsl(0, 0%, 100%);
-    background: #73B0FF;
+    background: #2c86ba;
 } 
 
 /* Small menu. */
@@ -798,7 +797,7 @@ a:active {
 }
 
 .social-nav li:hover{
-	background:#bfdbff;
+	background:68C8FF;
 }
 
 .social-nav li a{
@@ -1073,7 +1072,7 @@ X.X Header
 X.X Header Search 
 --------------------------------------------------------------*/
 .search-toggle {
-	background: #bfdbff;
+	background:#B8E4FF;
     color: #fff;
     cursor: pointer;
     float: right;
@@ -1085,7 +1084,7 @@ X.X Header Search
 
 .search-toggle:hover,
 .search-toggle.active {
-    background: #73B0FF;
+    background: #25064C;
 }
 
 @media screen and (max-width: 600px) {
@@ -1109,7 +1108,7 @@ input[type="search"] {
 }
 
 .search-box {
-    background: #73B0FF;
+    background: #25064C;
     padding: .5em 0;
 }
 
@@ -1179,7 +1178,7 @@ X.X Header Responsive
 .widget li { padding: 1em 0 0; }
 
 .footer-widgets .widget li a:hover{
-	color:#73B0FF;
+	color:#2c86ba;
 }
 
 .widget li ul,
@@ -1190,7 +1189,7 @@ X.X Header Responsive
 .widget_recent_entries li:before,
 .widget_recent_comments li:before,
 .widget_archive li:before {
-	color:#73B0FF;
+	color:#B8E4FF;
     display: block;
     float: left;
     padding-top: 2px;
@@ -1314,6 +1313,7 @@ X.X Header Responsive
 10.2 Top-Bar
 --------------------------------------------------------------*/
 .site-header{
+	border-bottom: 1px solid #efefef;
 }
 
 .top-bar{
@@ -1356,6 +1356,7 @@ Index and Archive
 }
 
 .continue-reading a{
+	color: #553285;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -1400,13 +1401,7 @@ Index and Archive
 .breadcrumbs i{
 	margin:0 8px 0 8px;
 }
-/*--------------------------------------------------------------
-10.X Posts and pages title and breadcrumbs
---------------------------------------------------------------*/
 
-/*--------------------------------------------------------------
-10.X Posts and pages typography
---------------------------------------------------------------*/
 .entry-title {
     color: #000;
     color: hsl(0, 0%, 0%);
@@ -1416,6 +1411,10 @@ Index and Archive
     font-weight: 900;
     line-height: 1.3em;
     margin: 0 0 1rem;
+}
+
+.entry-title a{
+	color:#333;
 }
 
 .entry-content a { 
@@ -1606,7 +1605,7 @@ Index and Archive
 }
 
 .byline .author a:hover{
-	color:#73B0FFf;
+	color:#2c86baf;
 }
 .single .byline,
 .group-blog .byline {
@@ -1618,7 +1617,7 @@ Index and Archive
 }
 
 .posted-on a:hover{
-	color:#73B0FF;
+	color:#2c86ba;
 }
 
 .page-content,
@@ -1755,6 +1754,10 @@ ol.children {
 .comment-metadata {
     font-size: 14px;
     font-size: .875rem;
+}
+
+.comments-link a{
+	color:#553285;
 }
 
 .comment-content { 
