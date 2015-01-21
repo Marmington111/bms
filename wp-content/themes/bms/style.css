@@ -621,7 +621,7 @@ a:active {
 }
 
 .main-navigation li:hover > a {
-    border-bottom:1px solid 68C8FF;/*light-blue*/
+    
 }
 
 .main-navigation ul ul :hover > a {
@@ -637,7 +637,8 @@ a:active {
 }
 
 .main-navigation li a:hover{
-	border-bottom:1px solid #efefef;
+	background:#efefef;
+	/*color:#fff;*/
 }
 
 .main-navigation ul ul li:hover > ul {
@@ -648,33 +649,38 @@ a:active {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_item > a:hover,
 .main-navigation .current-menu-item > a:hover {
-    background: 68C8FF;
-    color: #fff;
+    background:#fff;
+    border-top: 4px solid #B296D1;
+    color:#999;
+	padding-top: 14.2px;
 }
 
 .main-navigation .current_page_ancestor {
-    background: 68C8FF;
-    color:#fff;
-    /*background: hsl(0, 0%, 30%);*/
+    background: #efefef;
 }
 
 .main-navigation .current_page_ancestor a{
-	color:#fff;
+	
 }
 
 .main-navigation .current_page_ancestor ul a{
+	background:#fff;
 	color:#999;
 }
 
 .main-navigation .current_page_ancestor ul li:hover a{
-	color:#fff;
+	color:#B8E4FF;
+
 }
 
 .main-navigation ul ul .current_page_parent,
-.main-navigation .current_page_parent .current_page_item > a {
+.main-navigation .current_page_parent .current_page_item > a,
+.main-navigation ul ul .current_page_parent:hover,
+.main-navigation .current_page_parent .current_page_item:hover > a {
     color: #fff;
     color: hsl(0, 0%, 100%);
     background: #2c86ba;
+    border-top:none;
 } 
 
 /* Small menu. */
@@ -1850,6 +1856,87 @@ ol.children {
     margin: .625rem 0;
     padding: .313rem .625rem;
 }
+
+/*--------------------------------------------------------------
+X.X Page Styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+X.X Home Page
+--------------------------------------------------------------*/
+.home .section-title{
+	border-bottom:2px solid #efefef;
+	font-family: 'Open Sans', sans-serif;
+	font-size:300%;
+	font-weight: 900;
+	margin: 0 0 16px;
+	padding-bottom: 4px;
+	text-transform: uppercase;
+}
+
+.home .section-title span{
+	display: inline-block;
+	padding-bottom: 8px;
+	position: relative;
+}
+
+.home .section-title span:before,
+.home .section-title span:after {
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+	content: "";
+	display:block;
+	position:absolute;
+	bottom: -0.05em;
+	width: calc(50% - 22px);
+}
+
+.home .section-title span:before{
+	left: 0;
+}
+.home .section-title span:after {
+	right: 0;
+}
+
+.home .section-title span i:before {
+	background-color: transparent;
+	color: rgba(0, 0, 0, 0.2);
+	content:"";
+	display:block;
+	font-family: 'Fontawesome';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	height: 16px;
+	width: 36px;
+	line-height: 18px;
+	margin-left: -18px;
+	position:absolute;
+	left: 50%;
+	bottom: -10px;
+	speak:none;
+	text-align: center;
+	text-decoration: inherit;
+	-webkit-font-smoothing: antialiased;
+}
+
+.home .section-title.star span i:before {
+	content: "\f005";
+}
+
+.home .section-content{
+	font-size:20px;
+	font-weight: 300;
+	margin-top: 0;
+	padding: 0 32px;
+}
+
+/*--------------------------------------------------------------
+X.X Home Page - Intro Section
+--------------------------------------------------------------*/
+.site-intro{
+	background: url(images/wavecut.png);
+	padding:32px 0 48px;
+}
+
 /*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
@@ -2027,7 +2114,7 @@ object {
 --------------------------------------------------------------*/
 
 .site-footer{
-	background: #36175E;
+	background: #553285;
 	color:#fff;
 	color: hsl (0, 0%, 100%);
 	font-size:16px;
