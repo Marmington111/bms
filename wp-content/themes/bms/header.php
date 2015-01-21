@@ -76,7 +76,7 @@
 				    </div>
 			</div> 
 
-			<?php if ( is_page() || is_singular() ) { ?>
+			<?php if (! is_front_page() ) { ?>
 	            <div class="page-title">
 	                <div class="inner-wrap clearfix">
 	                    <h2 class="title"><?php echo get_the_title(); ?></h2>
