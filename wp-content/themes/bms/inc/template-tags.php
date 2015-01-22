@@ -295,18 +295,18 @@ add_action( 'save_post',     'bms_category_transient_flusher' );
 
 function bms_social_menu() {
     if ( has_nav_menu( 'social' ) ) {
-	wp_nav_menu(
-		array(
-			'theme_location'  => 'social',
-			'container'       => 'div',
-			'container_class' => 'social-nav',
-			'menu_id'         => 'menu-social-items',
-			'menu_class'      => 'menu-items clearfix',
-			'depth'           => 1,
-            'link_before'     => '<span class="screen-reader-text">',
-            'link_after'      => '</span>',
-			'fallback_cb'     => '',
-		)
-	);
+		wp_nav_menu(
+			array(
+				'theme_location'  => 'social',
+				'container'       => 'div',
+				'container_class' => 'social-nav',
+				'menu_id'         => 'menu-social-items',
+				'menu_class'      => 'menu-items clearfix',
+				'depth'           => 1,
+	            'link_before'     => '<span class="screen-reader-text">',
+	            'link_after'      => '</span>',
+				'fallback_cb'     => '',
+			)
+		);
     }
 }

@@ -96,7 +96,29 @@ function bms_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+	// Intro Widget
+	register_sidebar( array(
+		'name'          => __( 'Intro Widget', 'bms' ),
+		'description'   => __( 'Intro Widget area appears on the home page just under the header.', 'bms' ),
+		'id'            => 'intro-blurb',
+		'before_widget' => '<h2 id="%1$s" class="section-content %2$s">',
+		'after_widget'  => '</h2>',
+		'before_title'  => '<h1 class="section-title star"><span>',
+		'after_title'   => '<i></i></span></h1>',
+	) );
 
+	// Intro Icons Widget
+	register_sidebar( array(
+		'name'          => __( 'Intro Icons Widget', 'bms' ),
+		'description'   => __( 'Footer widgets area appears in the footer of the site.', 'bms' ),
+		'id'            => 'intro_icons',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+
+	// Footer Widget
 	register_sidebar( array(
 		'name'          => __( 'Footer Widgets', 'bms' ),
 		'description'   => __( 'Footer widgets area appears in the footer of the site.', 'bms' ),
