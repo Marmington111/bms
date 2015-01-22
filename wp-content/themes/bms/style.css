@@ -298,7 +298,7 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin-bottom:1.5em;
 }
 
 b,
@@ -1936,6 +1936,90 @@ X.X Home Page - Intro Section
 	background: url(images/wavecut.png);
 	padding:32px 0 48px;
 }
+
+/*--------------------------------------------------------------
+X.X Home Page - Icon Section
+--------------------------------------------------------------*/
+.intro-icons-wrap{
+	padding-top:32px;
+}
+
+.intro-icon{
+	float:left;
+	margin-right: 1.6%;
+}
+
+.intro-icon:nth-child(3){
+	margin-right: 0;
+}
+
+.intro-icon i{
+	font-size: 52px;
+	color: #B8E4FF;
+}
+
+.icon-title{
+	font-size: 18px;
+}
+
+.icon-content{
+	font-size: 16px;
+	padding: 0 24px;
+}
+
+/*--------------------------------------------------------------
+X.X Home Page - Write Up Section
+--------------------------------------------------------------*/
+.write-up{
+}
+
+.wu-image{
+	background: #efefef;
+	float:left;
+	height:800px;
+}
+
+.wu-content{
+	float:right;
+	padding: 0 1em 1em;
+	text-align: left;
+}
+.wu-title{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 32px;
+	font-weight: 900;
+	margin:0 0 8px 0;
+	text-transform: uppercase;
+}
+
+.wu-content p{
+	margin-top:0;
+}
+
+.wu-highlights{
+	border-bottom: 2px solid #efefef;
+	font-family: 'Open Sans', sans-serif;
+	font-size:18px;
+	font-weight: 900;
+	margin-bottom:8px;
+	padding-bottom: 4px;
+	text-transform: uppercase;
+}
+
+.wu-content ul{
+	color: #aaa;
+	font-size: 15px;
+	/* font-weight: 600; */
+	/* list-style: none; */
+	margin: 0 0 1.5em 0;
+	padding-left: 1.5em;
+	/* text-transform: uppercase; */
+}
+
+.wu-content li{
+	line-height:1.55;
+}
+
 
 /*--------------------------------------------------------------
 11.0 Infinite scroll

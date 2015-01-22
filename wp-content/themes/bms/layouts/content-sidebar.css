@@ -12,6 +12,9 @@ Layout: Content-Sidebar
 	text-align:center;
 }
 
+.site-main{
+}
+
 .site-content {
     padding-bottom: 4em;
     /*background: #b2b2b2 url(../images/pattern.svg) repeat;*/
@@ -26,7 +29,7 @@ Layout: Content-Sidebar
 	background: #fff;
 	float: right;
 	margin-left: 2%;
-	padding: 1rem;
+	padding:0 1rem 1rem;
 	width: 300px;
 }
 .site-footer {
