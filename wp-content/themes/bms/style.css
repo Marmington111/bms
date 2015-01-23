@@ -1936,13 +1936,28 @@ X.X Home Page - Intro Section
 .site-intro{
 	/*background: url(images/wavecut.png);*/
 	padding: 54px 0 88px;
+	position: relative;
+}
+
+.site-intro p{
+	font-size: 24px;
+}
+
+.triangle{
+	background: red;
+	height:50px;
+	width:50px;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
 }
 
 /*--------------------------------------------------------------
 X.X Home Page - Icon Section
 --------------------------------------------------------------*/
 .intro-icons-wrap{
-	padding: 0 0 32px;
+	padding: 64px 0;
+	background: url(images/wavecut.png);
 }
 
 .intro-icon{
@@ -1972,7 +1987,7 @@ X.X Home Page - Icon Section
 X.X Home Page - Write Up Section
 --------------------------------------------------------------*/
 .write-up{
-	background: url(images/wavecut.png);
+	background: #fff;
 	margin: 32px 0 0;
 	padding: 80px 0;
 }

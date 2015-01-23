@@ -30,7 +30,10 @@ get_header(); ?>
 	           			A revolutionary approach to <strong><em>injury rehabilitation</em></strong>. The nervous system is amazingly plastic and adaptable. More <strong><em>efficient movement patterns</em></strong> are the key to <strong><em>enjoying</em></strong> your favorite activities, sports, and <strong><em>life</em></strong>.
 	           		</h2> -->
            		</div><!-- inner-wrap -->
+
+	        	<div class="triangle"></div><!-- triangle -->
         	</section><!-- site-intro -->
+
 
         	<section class="intro-icons-wrap">
 	        	<div class="inner-wrap clearfix">
@@ -62,7 +65,7 @@ get_header(); ?>
 		        		</div><!-- write-up-wrap -->
 
 		        		<div class="wu-content span-five">
-							<h2 class="wu-title">Lack of Quality Movement</h2>
+							<h2 class="wu-title">Moving Poorly</h2>
 
 			        		<p>You are done. Fired. Do not show your face at the laundry again. Stay away from Pinkman. Do not go near him. Ever. Are you listening to me?</p>
 			        		
@@ -83,7 +86,33 @@ get_header(); ?>
 
 		        	<div class="write-up-wrap clearfix">
 		        		<div class="wu-image span-seven">
-		        			<img class="span-twelve" src="http://localhost:8888/body_movement_solutions/wp-content/uploads/2015/01/healthy-joint2.png"/>
+		        			<img class="span-twelve" src="http://localhost:8888/body_movement_solutions/wp-content/uploads/2015/01/neuro1.png"/>
+		        		</div><!-- wu-image -->
+
+		        		<div class="wu-content span-five">
+							<h2 class="wu-title">Nervous System</h2>
+
+			        		<p>You are done. Fired. Do not show your face at the laundry again. Stay away from Pinkman. Do not go near him. Ever. Are you listening to me?</p>
+			        		
+			        		<h3 class="wu-highlights">hightlights</h3>
+
+			        		<ul>
+				        		<li>Increased joint range of motion</li>
+				        		<li>Improved motion coordination and strength</li>
+				        		<li>Enhanced joint lubrication</li>
+				        		<li>Improved body awareness, coordination, and agility</li>
+				        		<li>Increased connective tissue strength</li>
+				        		<li>Enhanced proprioception and injury resistance</li>
+				        		<li>Dramatic postural improvement</li>
+				        		<li>Increased strength and athletic movement skill</li>
+				        		<li>Mental sharpness</li>
+			        		</ul>
+		        		</div><!-- wu-content -->
+		        	</div><!-- write-up-wrap -->
+
+		        	<div class="write-up-wrap clearfix">
+		        		<div class="wu-image span-seven">
+		        			<img class="span-twelve" src="http://localhost:8888/body_movement_solutions/wp-content/uploads/2015/01/healthy-joint3.png"/>
 		        		</div><!-- wu-image -->
 
 		        		<div class="wu-content span-five">
