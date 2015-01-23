@@ -143,6 +143,8 @@ function bms_scripts() {
     
     wp_enqueue_style( 'bms-font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' );
 
+    wp_enqueue_style( 'bms-flexslider-style', get_template_directory_uri() . '/css/flexslider.css' );
+
     wp_enqueue_script( 'bms-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20150115', true );
 
     wp_enqueue_script( 'bms-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('bms-superfish'), '20150115', true );
@@ -152,6 +154,10 @@ function bms_scripts() {
 	wp_enqueue_script( 'bms-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'bms-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+	wp_enqueue_script( 'bms-flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array('jquery'), '20150122', true );
+
+	wp_enqueue_script( 'bms-flexslider-settings', get_template_directory_uri() . '/js/flexslider-settings.js', array('bms-flexslider'), '20150122', true );
 
 	wp_enqueue_script( 'bms-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20110116', true );
                 
@@ -186,3 +192,47 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Register Custom Post Type: 'Testimonials'
+ */
+function bms_register_post_type_testimonail() {
+
+	$labels = array(
+		'name'               => __( 'Testimonials', 'bms' ),
+		'singular_name'      => __( 'Testimonail', 'bms' ),
+		'add_new'            => __( 'Add New', 'bms' ),
+		'add_new_item'       => __( 'Add New Testimonials', 'bms' ),
+		'edit_item'          => __( 'Edit Testimonials', 'bms' ),
+		'new_item'           => __( 'New Testimonials', 'bms' ),
+		'view_item'          => __( 'View Testimonials', 'bms' ),
+		'search_items'       => __( 'Search Testimonials', 'bms' ),
+		'not_found'          => __( 'No Testimonials found', 'bms' ),
+		'not_found_in_trash' => __( 'No Testimonials found in Trash', 'bms' ),
+		'parent_item_colon'  => __( 'Parent Testimonials:', 'bms' ),
+		'menu_name'          => __( 'Testimonials', 'bms' ),
+	);
+
+	$args = array(
+		'labels'              => $labels,
+		'hierarchical'        => false,
+		'supports'            => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+		'taxonomies'          => array( 'Testimonail-categories' ),
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'publicly_queryable'  => true,
+		'exclude_from_search' => true,
+		'has_archive'         => true,
+		'query_var'           => true,
+		'can_export'          => true,
+		'rewrite'             => array( 'slug' => 'Testimonail-item' ),
+		'capability_type'     => 'post',
+		'menu_position'       => null
+	);
+
+	register_post_type( 'testimonials', apply_filters( 'bms_register_post_type_testimonail', $args ) );
+
+} 
+add_action('init', 'bms_register_post_type_testimonail');

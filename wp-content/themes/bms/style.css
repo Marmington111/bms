@@ -1669,7 +1669,7 @@ Index and Archive
 /*--------------------------------------------------------------
 10.X Blockquotes
 --------------------------------------------------------------*/
-blockquote {
+/*blockquote {
     padding: 1em 1.5em 0;
     margin-bottom: 1em;
     font-style: italic;
@@ -1704,7 +1704,7 @@ blockquote.alignright {
     width: 50%;
     float: right;
     padding: 1em 0 0;
-    margin-left: 2em;
+   */ margin-left: 2em;
 }
 
 /*--------------------------------------------------------------
@@ -1971,12 +1971,22 @@ X.X Home Page - Icon Section
 X.X Home Page - Write Up Section
 --------------------------------------------------------------*/
 .write-up{
+	margin:32px 0 0;
+}
+
+.write-up-wrap{
+	margin-bottom:64px;
 }
 
 .wu-image{
-	background: #efefef;
-	float:left;
-	height:800px;
+	float: left;
+	padding: 8px 8px 0;
+	/* height: 500px; */
+	border: 1px solid #eee;
+}
+
+.wu-image img{
+	border: 1px solid #efefef;
 }
 
 .wu-content{
@@ -1988,11 +1998,13 @@ X.X Home Page - Write Up Section
 	font-family: 'Open Sans', sans-serif;
 	font-size: 32px;
 	font-weight: 900;
-	margin:0 0 8px 0;
+	margin:0 0 16px 0;
 	text-transform: uppercase;
 }
 
 .wu-content p{
+	color: #999;
+	font-size:16px;
 	margin-top:0;
 }
 
@@ -2008,7 +2020,7 @@ X.X Home Page - Write Up Section
 
 .wu-content ul{
 	color: #aaa;
-	font-size: 15px;
+	font-size: 14px;
 	/* font-weight: 600; */
 	/* list-style: none; */
 	margin: 0 0 1.5em 0;
@@ -2020,6 +2032,64 @@ X.X Home Page - Write Up Section
 	line-height:1.55;
 }
 
+/*--------------------------------------------------------------
+X.X Home Page - Call to Action
+--------------------------------------------------------------*/
+.cta{
+	background:#B8E4FF;
+	color:#fff;
+	font-size:21px;
+	padding:48px;
+	text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+X.X Home Page - Testimonials
+--------------------------------------------------------------*/
+
+.testimonials .flexslider { 
+	background: #fff; 
+	position: relative; 
+}
+
+.testimonials blockquote{
+	font-size: 22px;
+	font-weight: 300;
+	padding: 3em 3em 2em;
+}
+
+/*.testimonials blockquote:before{
+    color: #efefef;
+	content: '"';
+	font-family: 'Open Sans';
+	font-size: 122px;
+	position: absolute;
+	left: 1258px;
+	top: 49px;
+}*/
+
+.testimonials cite{
+    color: #666;
+    font-size:16px;
+    font-style:normal;
+    font-weight:700;
+}
+
+.testimonials cite span{
+    color:#B296D1;
+    font-weight:300;
+}
+
+.testimonials cite span:before{
+    content:' - ';
+}
+
+.by{
+	font-family: serif;
+	font-size:.88em;
+	font-style: italic;
+	font-weight:lighter;
+}
 
 /*--------------------------------------------------------------
 11.0 Infinite scroll

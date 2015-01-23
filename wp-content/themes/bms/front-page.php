@@ -55,31 +55,97 @@ get_header(); ?>
         	</section><!-- intro-icons-wrap -->
 
         	<section class="write-up">
-        		<div class="inner-wrap clearfix">
-        	
-        		<div class="wu-image span-eight">
-        			
-        		</div><!--  -->
-	        		<div class="wu-content span-four">
-						<h2 class="wu-title">Lack of Quality Movement</h2>
+        		<div class="inner-wrap">	        	
+		        	<div class="write-up-wrap clearfix">
+		        		<div class="wu-image span-seven ">
+		        			<img class="span-twelve" src="http://localhost:8888/body_movement_solutions/wp-content/uploads/2015/01/bad-joint1.png"/>
+		        		</div><!-- write-up-wrap -->
 
-		        		<p>You are done. Fired. Do not show your face at the laundry again. Stay away from Pinkman. Do not go near him. Ever. Are you listening to me?</p>
-		        		
-		        		<h3 class="wu-highlights">hightlights</h3>
+		        		<div class="wu-content span-four">
+							<h2 class="wu-title">Lack of Quality Movement</h2>
 
-		        		<ul>
-			        		<li>Poor or worsening posture</li>
-			        		<li>Wear and tear of tissues</li>
-			        		<li>Weakening of tissues and muscles</li>
-			        		<li>Joint stiffness or inflammation</li>
-			        		<li>General weakness and fatigue</li>
-			        		<li>Coordination deficits</li>
-			        		<li>Poor performance</li>
-			        		<li>Pain</li>
-		        		</ul>
-	        		</div><!-- wu-content -->
+			        		<p>You are done. Fired. Do not show your face at the laundry again. Stay away from Pinkman. Do not go near him. Ever. Are you listening to me?</p>
+			        		
+			        		<h3 class="wu-highlights">hightlights</h3>
+
+			        		<ul>
+				        		<li>Poor or worsening posture</li>
+				        		<li>Wear and tear of tissues</li>
+				        		<li>Weakening of tissues and muscles</li>
+				        		<li>Joint stiffness or inflammation</li>
+				        		<li>General weakness and fatigue</li>
+				        		<li>Coordination deficits</li>
+				        		<li>Poor performance</li>
+				        		<li>Pain</li>
+			        		</ul>
+		        		</div><!-- wu-content -->
+		        	</div><!-- write-up-wrap -->
+
+		        	<div class="write-up-wrap clearfix">
+		        		<div class="wu-image span-seven">
+		        			<img class="span-twelve" src="http://localhost:8888/body_movement_solutions/wp-content/uploads/2015/01/healthy-joint2.png"/>
+		        		</div><!-- wu-image -->
+
+		        		<div class="wu-content span-four">
+							<h2 class="wu-title">Moving accurately</h2>
+
+			        		<p>You are done. Fired. Do not show your face at the laundry again. Stay away from Pinkman. Do not go near him. Ever. Are you listening to me?</p>
+			        		
+			        		<h3 class="wu-highlights">hightlights</h3>
+
+			        		<ul>
+				        		<li>Increased joint range of motion</li>
+				        		<li>Improved motion coordination and strength</li>
+				        		<li>Enhanced joint lubrication</li>
+				        		<li>Improved body awareness, coordination, and agility</li>
+				        		<li>Increased connective tissue strength</li>
+				        		<li>Enhanced proprioception and injury resistance</li>
+				        		<li>Dramatic postural improvement</li>
+				        		<li>Increased strength and athletic movement skill</li>
+				        		<li>Mental sharpness</li>
+			        		</ul>
+		        		</div><!-- wu-content -->
+		        	</div><!-- write-up-wrap -->
         		</div><!-- inner-wrap -->
+        	</section><!-- write-up -->
+
+        	<section class="cta">
+	        	<div class="inner-wrap">
+	        		<p><strong><em>Brian’s movement coaching</em></strong> can help you correct <strong><em>any</em></strong> physical difficulties you are having!</p>
+	        	</div>
         	</section>
+
+        	<section class="testimonials">
+	        	<div class="inner-wrap">
+	        		<div class="flexslider">
+	        				<ul class="slides">
+	        					<li>
+	        						<blockquote>
+	        							<p>Brian’s movement coaching can help you correct any physical difficulties you are having which are limiting or preventing your activities.</p>
+
+	        							<cite>Henri T. <span>Otolaryngologist Head and Neck Surgeon</span></cite>
+	        						</blockquote>
+	        					</li>
+
+	        					<li>
+	        						<blockquote>
+	        							<p>Within 2 months my mom made tremendous progress with her mobility and her overall well-being.</p>
+
+	        							<cite>Henri T. <span>Otolaryngologist Head and Neck Surgeon</span></cite>
+	        						</blockquote>
+	        					</li>
+
+	        					<li>
+	        						<blockquote>
+	        							<p>Since training with Brian, I have actually just now begun to understand how my body is supposed to move in a more efficient manner, so that I can move more freely, whether in Martial Arts, or everyday movement, such as walking down the street!</p>
+
+	        							<cite>Henri T. <span>Otolaryngologist Head and Neck Surgeon</span></cite>
+	        						</blockquote>
+	        					</li>
+	        				</ul>
+	        		</div><!-- flexslider -->
+	        	</div><!-- inner-wrap -->
+        	</section><!-- testimonials -->
         </main><!-- #main -->
 	</div><!-- #primary -->
 
