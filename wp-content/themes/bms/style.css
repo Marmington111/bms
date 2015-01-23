@@ -542,7 +542,7 @@ a:active {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-    background: #fff;
+    background: #333;
     clear: both;
     display: block;
     float: left;
@@ -559,14 +559,16 @@ a:active {
 }
 
 .main-navigation li {
-	border-right: 1px solid #efefef;
-	box-sizing:border-box;
+	overflow: hidden;
+	border-right: 1px solid #171717; 
+	font-size: 14px;
+	box-shadow: inset -1px 0 0 0 rgba(255, 255, 255, 0.065);
 	float: left;
-	position: relative;
 }
 
 .main-navigation li:nth-child(1){
-	border-left: 1px solid #efefef;
+	border-left: 1px solid #171717;
+	box-shadow: inset -1px 0 0 0 rgba(255, 255, 255, 0.065), -1px 0 0 0 rgba(255, 255, 255, 0.065);
 }
 
 .main-navigation a {
@@ -649,7 +651,7 @@ a:active {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_item > a:hover,
 .main-navigation .current-menu-item > a:hover {
-    background:#fff;
+    /*background:#fff;*/
     border-top: 4px solid #B296D1;
     color:#999;
 	padding-top: 14.2px;
@@ -1864,7 +1866,6 @@ X.X Page Styles
 X.X Home Page
 --------------------------------------------------------------*/
 .home .section-title{
-	border-bottom:2px solid #efefef;
 	font-family: 'Open Sans', sans-serif;
 	font-size:300%;
 	font-weight: 900;
@@ -1933,15 +1934,15 @@ X.X Home Page
 X.X Home Page - Intro Section
 --------------------------------------------------------------*/
 .site-intro{
-	background: url(images/wavecut.png);
-	padding:32px 0 48px;
+	/*background: url(images/wavecut.png);*/
+	padding: 54px 0 88px;
 }
 
 /*--------------------------------------------------------------
 X.X Home Page - Icon Section
 --------------------------------------------------------------*/
 .intro-icons-wrap{
-	padding-top:32px;
+	padding: 0 0 32px;
 }
 
 .intro-icon{
@@ -1971,7 +1972,9 @@ X.X Home Page - Icon Section
 X.X Home Page - Write Up Section
 --------------------------------------------------------------*/
 .write-up{
-	margin:32px 0 0;
+	background: url(images/wavecut.png);
+	margin: 32px 0 0;
+	padding: 80px 0;
 }
 
 .write-up-wrap{
@@ -1991,7 +1994,7 @@ X.X Home Page - Write Up Section
 
 .wu-content{
 	float:right;
-	padding: 0 1em 1em;
+	padding: 0 0 1em 3em;
 	text-align: left;
 }
 .wu-title{
@@ -2022,7 +2025,7 @@ X.X Home Page - Write Up Section
 	color: #aaa;
 	font-size: 14px;
 	/* font-weight: 600; */
-	/* list-style: none; */
+	 list-style: none; 
 	margin: 0 0 1.5em 0;
 	padding-left: 1.5em;
 	/* text-transform: uppercase; */
@@ -2032,13 +2035,20 @@ X.X Home Page - Write Up Section
 	line-height:1.55;
 }
 
+.wu-content li:before{
+	content: "\f0da";
+	font-family: 'fontawesome';
+	margin-left: -15px;
+	margin-right: 12px;
+}
+
 /*--------------------------------------------------------------
 X.X Home Page - Call to Action
 --------------------------------------------------------------*/
 .cta{
 	background:#B8E4FF;
 	color:#fff;
-	font-size:21px;
+	font-size:24px;
 	padding:48px;
 	text-transform: uppercase;
 }
@@ -2055,7 +2065,7 @@ X.X Home Page - Testimonials
 .testimonials blockquote{
 	font-size: 22px;
 	font-weight: 300;
-	padding: 3em 3em 2em;
+	padding: 1em 3em 0em;
 }
 
 /*.testimonials blockquote:before{

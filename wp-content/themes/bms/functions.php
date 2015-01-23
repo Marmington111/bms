@@ -118,6 +118,17 @@ function bms_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 
+	// Call to Action Widget
+	register_sidebar( array(
+		'name'          => __( 'Call to Action Widget', 'bms' ),
+		'description'   => __( 'Homepage widget for presenting a call to action.', 'bms' ),
+		'id'            => 'cta',
+		'before_widget' => '<p class="cta-content">',
+		'after_widget'  => '</p>',
+		'before_title'  => '<h1 class="cta-title">',
+		'after_title'   => '</h1>',
+	) );
+
 	// Footer Widget
 	register_sidebar( array(
 		'name'          => __( 'Footer Widgets', 'bms' ),

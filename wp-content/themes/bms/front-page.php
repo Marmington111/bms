@@ -61,7 +61,7 @@ get_header(); ?>
 		        			<img class="span-twelve" src="http://localhost:8888/body_movement_solutions/wp-content/uploads/2015/01/bad-joint1.png"/>
 		        		</div><!-- write-up-wrap -->
 
-		        		<div class="wu-content span-four">
+		        		<div class="wu-content span-five">
 							<h2 class="wu-title">Lack of Quality Movement</h2>
 
 			        		<p>You are done. Fired. Do not show your face at the laundry again. Stay away from Pinkman. Do not go near him. Ever. Are you listening to me?</p>
@@ -86,7 +86,7 @@ get_header(); ?>
 		        			<img class="span-twelve" src="http://localhost:8888/body_movement_solutions/wp-content/uploads/2015/01/healthy-joint2.png"/>
 		        		</div><!-- wu-image -->
 
-		        		<div class="wu-content span-four">
+		        		<div class="wu-content span-five">
 							<h2 class="wu-title">Moving accurately</h2>
 
 			        		<p>You are done. Fired. Do not show your face at the laundry again. Stay away from Pinkman. Do not go near him. Ever. Are you listening to me?</p>
@@ -111,12 +111,36 @@ get_header(); ?>
 
         	<section class="cta">
 	        	<div class="inner-wrap">
-	        		<p><strong><em>Brian’s movement coaching</em></strong> can help you correct <strong><em>any</em></strong> physical difficulties you are having!</p>
+	        		<?php get_sidebar( 'cta' ); ?>
+	        		<!-- <p><strong><em>Brian’s movement coaching</em></strong> can help you correct <strong><em>any</em></strong> physical difficulties you are having!</p> -->
 	        	</div>
         	</section>
 
         	<section class="testimonials">
 	        	<div class="inner-wrap">
+	        		<?php
+	        		$test = array( 
+	        			'post_type'			=> 'testimonials', 
+	        			'posts_per_page'	=> 5
+	        		);
+
+	        		$loop = new WP_Query( $test );
+
+	        		echo '<div class="flexslider"><ul class="slides">';
+	        		while ( $loop->have_posts() ) : $loop->the_post();
+	        			echo '<li><blockquote>';
+	        				the_content();
+	        				echo '<cite>';
+	        				echo get_post_meta( $post->ID, "bms_cite", true );
+	        					echo '<span>';
+		        					echo get_post_meta( $post->ID, "bms_cite", true );
+	        					echo '</span>';
+	        				echo '</cite>';
+	        			echo '</blockquote></li>';
+	        		endwhile;
+	        		echo '</ul></div>';
+	        		?>
+	        		
 	        		<div class="flexslider">
 	        				<ul class="slides">
 	        					<li>
