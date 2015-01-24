@@ -1944,19 +1944,22 @@ X.X Home Page - Intro Section
 }
 
 .triangle{
-	background: red;
+	background: #fff;
 	height:50px;
 	width:50px;
 	position: absolute;
-	bottom: 0px;
-	left: 50%;
+	bottom: -9px;
+	left: calc(50% - 25px);
+	-ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
 }
 
 /*--------------------------------------------------------------
 X.X Home Page - Icon Section
 --------------------------------------------------------------*/
 .intro-icons-wrap{
-	padding: 64px 0;
+	padding: 74px 0 58px;
 	background: url(images/wavecut.png);
 }
 
