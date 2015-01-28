@@ -2120,6 +2120,50 @@ X.X Home Page - Testimonials
 }
 
 /*--------------------------------------------------------------
+X.X About - Bio Section
+--------------------------------------------------------------*/
+.bio-header {
+	margin: 32px 0;
+}
+
+.bio-pic {
+	border: 1px solid #efefef;
+	float: left;
+	padding: 8px 8px 2px;
+}
+
+.bio-intro{
+	padding-left: 500px;
+}
+
+.bio-name{
+	font-size: 32px;
+	margin-bottom: 8px;
+}
+
+.bio-blurb {
+	color:#818181;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #efefef;
+}
+
+.bio-cat {
+	border-bottom: 1px solid #efefef;
+	color: #818181;
+	margin-bottom: 0;
+	padding-bottom: 16px;
+}
+
+.bio-cat i {
+	color: #2C86BA;
+	margin-right: 8px;
+}
+
+.bio-cat span{
+	font-weight: 900;
+}
+
+/*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
@@ -2272,6 +2316,11 @@ object {
     width:95%;
     max-width:1200px;
     margin:0 auto;
+}
+
+::selection {
+	color: #ffffff;
+	background-color: #B8E4FF;
 }
 
 .single-post-thumbnail { 

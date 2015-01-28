@@ -9,7 +9,7 @@
 	<?php
 	if (has_post_thumbnail()) {
 	    echo '<div class="small-index-thumbnail clear">';
-	    echo '<a href="' . get_permalink() . '" title="' . __('Read ', 'my-simone') . get_the_title() . '" rel="bookmark">';
+	    echo '<a href="' . get_permalink() . '" title="' . __('Read ', 'bms') . get_the_title() . '" rel="bookmark">';
 	    echo the_post_thumbnail('index-thumb');
 	    echo '</a>';
 	    echo '</div>';
@@ -43,7 +43,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer continue-reading">
-	    <?php echo '<a href="' . get_permalink() . '" title="' . __('Continue Reading ', 'my-simone') . get_the_title() . '" rel="bookmark">Continue Reading<i class="fa fa-arrow-circle-o-right"></i></a>'; ?>
+	    <?php echo '<a href="' . get_permalink() . '" title="' . __('Continue Reading ', 'bms') . get_the_title() . '" rel="bookmark">Continue Reading<i class="fa fa-arrow-circle-o-right"></i></a>'; ?>
 	</footer><!-- .entry-footer -->
 </div><!-- index-box -- >
 </article><!-- #post-## -->

@@ -46,8 +46,7 @@ Layout: Content-Sidebar
 .comments-area,
 .paging-navigation {
 	margin: 0 auto;
-	max-width:900px;
-	max-width:56.25rem;
+	max-width:1200px;
 	position: relative;
 
 }

@@ -101,7 +101,7 @@ function bms_widgets_init() {
 		'name'          => __( 'Intro Widget', 'bms' ),
 		'description'   => __( 'Intro Widget area appears on the home page just under the header.', 'bms' ),
 		'id'            => 'intro-blurb',
-		'before_widget' => '<h2>',
+		'before_widget' => '<h2 id="%1$s" class="section-content %2$s">',
 		'after_widget'  => '</h2>',
 		'before_title'  => '<h1 class="section-title star"><span>',
 		'after_title'   => '<i></i></span></h1>',
@@ -247,3 +247,9 @@ function bms_register_post_type_testimonail() {
 
 } 
 add_action('init', 'bms_register_post_type_testimonail');
+
+/**
+ * disable the wpautop filter
+ */
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
