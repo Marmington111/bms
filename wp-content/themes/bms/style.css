@@ -291,14 +291,13 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-family:'Roboto Slab' serif;
 	font-weight:700;
 	-ms-word-break: break-word;
 	word-break: break-word;
 }
 
 p {
-	margin-bottom:1.5em;
+	margin:0 0 1em;
 }
 
 b,
@@ -546,7 +545,6 @@ a:active {
     clear: both;
     display: block;
     float: left;
-    font-family: 'Roboto Slab', serif;
     position: relative;
     width: 100%;
     text-transform: uppercase;
@@ -574,6 +572,7 @@ a:active {
 .main-navigation a {
     color: #999;
     display: block;
+    font-family: 'Roboto Slab', serif;
     font-size: 14px;
     font-size: .875rem;
     line-height: 18px;
@@ -1435,50 +1434,46 @@ Index and Archive
 .entry-content h4,
 .entry-content h5,
 .entry-content h6 { 
+	color: #999;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 900;
 	margin-bottom: .4em; 
+	text-transform: uppercase;
 }
 
 .entry-content h1 {
     font-size: 32px;
-    font-size: 2rem;
 }
 
 .entry-content h2 {
     font-size: 30px;
-    font-size: 1.876rem;
 }
 
 .entry-content h3 {
     font-size: 28px;
-    font-size: 1.75rem;
 }
 
 .entry-content h4 {
     font-size: 26px;
-    font-size: 1.626rem;
 }
 
 .entry-content h5 {
     font-size: 24px;
-    font-size: 1.5rem;
 }
 
 .entry-content h6 {
     font-size: 22px;
-    font-size: 1.375rem;
 }
 
 .entry-content p,
 .entry-content ul,
 .entry-content ol {
     font-size: 20px;
-    font-size: 1.25rem;
     line-height: 1.25em;
 }
 
 .entry-content blockquote p {
     font-size: 24px;
-    font-size: 1.55rem;
     line-height: 1.5em;
 }
 
@@ -1488,7 +1483,6 @@ Index and Archive
 @media screen and (max-width: 680px) {
     .entry-title {
         font-size: 32px;
-        font-size: 2rem;
         line-height: 1.3em;
     }
     .entry-content h1 {
@@ -1503,34 +1497,28 @@ Index and Archive
 
     .entry-content h3 {
         font-size: 24px;
-        font-size: 1.5rem;
     }
 
     .entry-content h4 {
         font-size: 22px;
-        font-size: 1.375rem;
     }
 
     .entry-content h5 {
         font-size: 20px;
-        font-size: 1.25rem;
     }
 
     .entry-content h6 {
         font-size: 18px;
-        font-size: 1.125rem;
     }
 
     .entry-content p,
     .entry-content ul,
     .entry-content ol  {
         font-size: 18px;
-        font-size: 1.125rem;
     }
     
     .entry-content blockquote p {
         font-size: 22px;
-        font-size: 1.375rem;
         line-height: 1.5em;
     }
 }
@@ -1541,7 +1529,6 @@ Index and Archive
 .category-list {
 	color:#999;
     margin: 1.3em 0 0;
-    font-family: 'Roboto Slab', serif;
     font-size: 16px;
     font-size: 1rem;
     font-weight:300;
@@ -1560,7 +1547,6 @@ Index and Archive
 .entry-meta {
     margin-bottom: 1.25rem;
     padding: 0;
-    font-family: 'Roboto Slab', serif;
     font-size: 14px;
     font-size: .875rem;
 }
@@ -1568,7 +1554,6 @@ Index and Archive
 .entry-meta a { font-weight: 700; }
 
 .entry-footer {
-    font-family: 'Roboto Slab', serif;
     font-size: 16px;
     font-size: 1rem;
     line-height: 2em;
@@ -1832,7 +1817,6 @@ ol.children {
 
 .comment-form {
     padding-bottom: 4rem;
-    font-family: 'Roboto Slab', serif;
     font-size: 16px;
     font-size: 1rem;
 }
@@ -1862,6 +1846,66 @@ ol.children {
 /*--------------------------------------------------------------
 X.X Page Styles
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+X.X Accordion
+--------------------------------------------------------------*/
+#accordion .ui-accordion-header,
+#accordion .ui-accordion-content {
+	border: 1px solid #ccc;
+	border-radius: 0px;
+}
+
+#accordion .ui-accordion-header {
+	
+	font-size: 18px;
+	font-weight: 300;
+	margin-bottom: 8px;
+	padding: 12px;
+	position: relative;
+	text-transform: uppercase;
+}
+
+#accordion .ui-accordion-header i:after,
+#accordion .ui-accordion-header.ui-state-active i:after {
+	font-family: 'fontawesome';
+	font-style: normal;
+	position: absolute;
+	right:12px;
+	top: 14px;
+}
+
+#accordion .ui-accordion-header i:after {
+	content: "\f067";
+}
+
+#accordion .ui-accordion-header.ui-state-active i:after {
+	color: #999;
+	content: "\f00d";
+
+}
+
+#accordion .ui-accordion-content {
+	border-top: 1px solid #ccc !important;
+	color: #818181;
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 8px;
+	padding: 12px;
+}
+
+
+#accordion .ui-accordion-content p {
+	font-size: 16px;
+}
+
+.ui-state-default {
+	background: #2C86BA;
+	color: #fff;
+}
+
+.ui-state-active {
+	background: #efefef;
+	color: #414141;
+}
 /*--------------------------------------------------------------
 X.X Home Page
 --------------------------------------------------------------*/
@@ -2151,7 +2195,7 @@ X.X About - Bio Section
 	border-bottom: 1px solid #efefef;
 	color: #818181;
 	margin-bottom: 0;
-	padding-bottom: 16px;
+	padding: 16px;
 }
 
 .bio-cat i {
@@ -2161,6 +2205,20 @@ X.X About - Bio Section
 
 .bio-cat span{
 	font-weight: 900;
+}
+
+.page-id-9 .entry-content p:first-child{
+	color: #818181;
+	font-size: 24px;
+}
+
+.page-id-9 .entry-content p:first-child::first-letter{
+	color: #25064C;
+	float: left;
+	font-size: 103px;
+	font-weight: 700;
+	line-height: 76px;
+	padding: 4px 8px 0 3px;
 }
 
 /*--------------------------------------------------------------
@@ -2214,7 +2272,6 @@ object {
 .gallery-caption {
     background: #e5e5e5;
     background: hsl(0, 0%, 90%);
-    font-family: 'Roboto Slab', serif;
     font-size: 14px;
     font-size: .875rem;
     padding: 0.8075em 1em;

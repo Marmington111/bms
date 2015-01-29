@@ -7,7 +7,7 @@
 
 get_header(); ?>
 <div class="inner-wrap clearfix">
-	<div id="primary" class="content-area span-eight clearfix">
+	<div id="primary" class="content-area span-twelve clearfix">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -18,8 +18,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	
-	<?php get_sidebar(); ?>
 </div><!-- inner-wrap -->
 
 <?php get_footer(); ?>
