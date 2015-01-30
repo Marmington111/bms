@@ -1875,12 +1875,26 @@ X.X Accordion
 }
 
 #accordion .ui-accordion-header i:after {
+	border-radius: 50%;
+	background: #fff;
+	color: #2C86BA;
 	content: "\f067";
+	line-height: 27px;
+	padding-top: 1px;
+	text-align: center;
+	width: 26px;
+	height: 26px;
 }
 
 #accordion .ui-accordion-header.ui-state-active i:after {
-	color: #999;
+	background: #2C86BA;
+	border-radius: 50%;
+	color: #fff;
 	content: "\f00d";
+	padding-top: 0;
+	text-align: center;
+	width: 26px;
+	height: 26px;
 
 }
 
@@ -1903,7 +1917,7 @@ X.X Accordion
 }
 
 .ui-state-active {
-	background: #efefef;
+	background: #fff;
 	color: #414141;
 }
 /*--------------------------------------------------------------
@@ -2212,7 +2226,8 @@ X.X About - Bio Section
 	font-size: 24px;
 }
 
-.page-id-9 .entry-content p:first-child::first-letter{
+.page-id-9 .entry-content p:first-child::first-letter,
+.page-id-13 .entry-content p:nth-child(2)::first-letter{
 	color: #25064C;
 	float: left;
 	font-size: 103px;
