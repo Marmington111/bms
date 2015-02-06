@@ -13,6 +13,14 @@ if ( ! isset( $content_width ) ) {
 }
 
 if ( ! function_exists( 'bms_setup' ) ) :
+
+/**
+ * Include demo.php for meta-box
+ */
+include( get_template_directory() . '/inc/demo/demo.php' );
+
+
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -50,7 +58,7 @@ function bms_setup() {
 	add_image_size('large-thumb', 1060, 650, true);
 	add_image_size('index_thumb', 780, 250, true);
 
-	// This theme uses wp_nav_menu() in one location.
+	// This theme uses wp_nav_menu() in two location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'bms' ),
 		'social'	=> __( 'Social Menu', 'bms' ),

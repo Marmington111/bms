@@ -174,7 +174,15 @@ get_header(); ?>
 	        				<ul class="slides">
 	        					<li>
 	        						<blockquote>
-	        							<p>Brian’s movement coaching can help you correct any physical difficulties you are having which are limiting or preventing your activities.</p>
+	        							<p>“The results have been pretty miraculous.  The knot in my back is gone, my leg strength is coming back, I walk more relaxed, I’m becoming more flexible and I am back to skiing full days again.”</p>
+
+	        							<cite>Jim K. <span>Musician/Ski Instructor</span></cite>
+	        						</blockquote>
+	        					</li>
+
+	        					<li>
+	        						<blockquote>
+	        							<p>"Throughout my youth I had been entirely graceless and clumsy in every sport, but that was simply no longer true.  A year ago I would not have believed that I would now be training to fence competitively."</p>
 
 	        							<cite>Henri T. <span>Otolaryngologist Head and Neck Surgeon</span></cite>
 	        						</blockquote>
@@ -182,17 +190,33 @@ get_header(); ?>
 
 	        					<li>
 	        						<blockquote>
-	        							<p>Within 2 months my mom made tremendous progress with her mobility and her overall well-being.</p>
+	        							<p>“Within 2 months my mom made tremendous progress with her mobility and her overall well-being.”</p>
 
-	        							<cite>Henri T. <span>Otolaryngologist Head and Neck Surgeon</span></cite>
+	        							<cite>Shiva K. <span>International Telecom</span></cite>
 	        						</blockquote>
 	        					</li>
 
 	        					<li>
 	        						<blockquote>
-	        							<p>Since training with Brian, I have actually just now begun to understand how my body is supposed to move in a more efficient manner, so that I can move more freely, whether in Martial Arts, or everyday movement, such as walking down the street!</p>
+	        							<p>“Since training with Brian, I have actually just now begun to understand how my body is supposed to move in a more efficient manner, so that I can move more freely, whether in Martial Arts, or everyday movement, such as walking down the street!”</p>
 
-	        							<cite>Henri T. <span>Otolaryngologist Head and Neck Surgeon</span></cite>
+	        							<cite>John J. <span>Royal Air Technologies Owner and Martial Artist</span></cite>
+	        						</blockquote>
+	        					</li>
+
+	        					<li>
+	        						<blockquote>
+	        							<p>“Brian’s style of instruction has worked well for me because he explains in depth the principles behind the exercises in which we engage.”</p>
+
+	        							<cite>Bill K. <span>Retired Red Line T Operator</span></cite>
+	        						</blockquote>
+	        					</li>
+
+	        					<li>
+	        						<blockquote>
+	        							<p>“Very thankfully, I found Brian, who over the course of only a few months brought me to the point where I often forget I had ever suffered a severe injury.”</p>
+
+	        							<cite>Nancy B. <span>Writer</span></cite>
 	        						</blockquote>
 	        					</li>
 	        				</ul>
