@@ -12,7 +12,7 @@
  */
 
 
-add_filter( 'rwmb_meta_boxes', 'bms_register_meta_boxes' );
+add_filter( 'rwmb_meta_boxes', 'your_prefix_register_meta_boxes' );
 
 /**
  * Register meta boxes
@@ -23,7 +23,7 @@ add_filter( 'rwmb_meta_boxes', 'bms_register_meta_boxes' );
  *
  * @return array
  */
-function bms_register_meta_boxes( $meta_boxes )
+function your_prefix_register_meta_boxes( $meta_boxes )
 {
 	/**
 	 * prefix of meta keys (optional)
@@ -31,7 +31,7 @@ function bms_register_meta_boxes( $meta_boxes )
 	 * Alt.: You also can make prefix empty to disable it
 	 */
 	// Better has an underscore as last sign
-	$prefix = 'bms_';
+	$prefix = 'your_prefix_';
 
 	// 1st meta box
 	$meta_boxes[] = array(

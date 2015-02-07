@@ -59,30 +59,42 @@ get_header(); ?>
 
         	<section class="write-up">
         		<div class="inner-wrap">	        	
-		        	<div class="write-up-wrap clearfix">
-		        		<div class="wu-image span-seven ">
-		        			<img class="span-twelve" src="http://localhost:8888/body_movement_solutions/wp-content/uploads/2015/01/bad-joint1.png"/>
-		        		</div><!-- write-up-wrap -->
+					<?php
+					$high = array( 
+						'post_type'			=> 'highlights', 
+						'posts_per_page'	=> 3
+					);
 
-		        		<div class="wu-content span-five">
-							<h2 class="wu-title">Moving Poorly</h2>
+					$loop = new WP_Query( $high );
 
-			        		<p>You are done. Fired. Do not show your face at the laundry again. Stay away from Pinkman. Do not go near him. Ever. Are you listening to me?</p>
-			        		
-			        		<h3 class="wu-highlights">hightlights</h3>
+		        	echo '<div class="write-up-wrap clearfix">';
+					while ( $loop->have_posts() ) : $loop->the_post();
+						echo '<div class="wu-image span-seven">';
+							
+						echo '</div>';
+						echo '<div class="wu-content span-five">';
+							echo '<h2 class="wu-title">';
+							the_title();
+							echo '</h2>';
+							the_content();
+							echo '<h3 class="wu-highlights">highlights</h3>';
 
-			        		<ul>
-				        		<li>Poor or worsening posture</li>
-				        		<li>Wear and tear of tissues</li>
-				        		<li>Weakening of tissues and muscles</li>
-				        		<li>Joint stiffness or inflammation</li>
-				        		<li>General weakness and fatigue</li>
-				        		<li>Coordination deficits</li>
-				        		<li>Poor performance</li>
-				        		<li>Pain</li>
-			        		</ul>
-		        		</div><!-- wu-content -->
-		        	</div><!-- write-up-wrap -->
+							$highlights = rwmb_meta( 'rw_highlight_item' );
+							$content = '<ul>';
+							foreach ( $highlights as $highlight )
+							{
+								$content .= sprintf(
+									'<li>%s</li>',
+									$highlight->name
+								);
+							}
+
+							$content .= '</ul>';
+							echo $content;
+						echo '</div>';
+					endwhile;
+					echo '</div>';
+					?>
 
 		        	<div class="write-up-wrap clearfix">
 		        		<div class="wu-image span-seven">
@@ -160,67 +172,15 @@ get_header(); ?>
 	        			echo '<li><blockquote>';
 	        				the_content();
 	        				echo '<cite>';
-	        				echo get_post_meta( $post->ID, "bms_cite", true );
+	        				echo rwmb_meta( 'rw_author' );
 	        					echo '<span>';
-		        					echo get_post_meta( $post->ID, "bms_cite", true );
+		        					echo rwmb_meta( 'rw_job' );
 	        					echo '</span>';
 	        				echo '</cite>';
 	        			echo '</blockquote></li>';
 	        		endwhile;
 	        		echo '</ul></div>';
 	        		?>
-	        		
-	        		<div class="flexslider">
-	        				<ul class="slides">
-	        					<li>
-	        						<blockquote>
-	        							<p>“The results have been pretty miraculous.  The knot in my back is gone, my leg strength is coming back, I walk more relaxed, I’m becoming more flexible and I am back to skiing full days again.”</p>
-
-	        							<cite>Jim K. <span>Musician/Ski Instructor</span></cite>
-	        						</blockquote>
-	        					</li>
-
-	        					<li>
-	        						<blockquote>
-	        							<p>"Throughout my youth I had been entirely graceless and clumsy in every sport, but that was simply no longer true.  A year ago I would not have believed that I would now be training to fence competitively."</p>
-
-	        							<cite>Henri T. <span>Otolaryngologist Head and Neck Surgeon</span></cite>
-	        						</blockquote>
-	        					</li>
-
-	        					<li>
-	        						<blockquote>
-	        							<p>“Within 2 months my mom made tremendous progress with her mobility and her overall well-being.”</p>
-
-	        							<cite>Shiva K. <span>International Telecom</span></cite>
-	        						</blockquote>
-	        					</li>
-
-	        					<li>
-	        						<blockquote>
-	        							<p>“Since training with Brian, I have actually just now begun to understand how my body is supposed to move in a more efficient manner, so that I can move more freely, whether in Martial Arts, or everyday movement, such as walking down the street!”</p>
-
-	        							<cite>John J. <span>Royal Air Technologies Owner and Martial Artist</span></cite>
-	        						</blockquote>
-	        					</li>
-
-	        					<li>
-	        						<blockquote>
-	        							<p>“Brian’s style of instruction has worked well for me because he explains in depth the principles behind the exercises in which we engage.”</p>
-
-	        							<cite>Bill K. <span>Retired Red Line T Operator</span></cite>
-	        						</blockquote>
-	        					</li>
-
-	        					<li>
-	        						<blockquote>
-	        							<p>“Very thankfully, I found Brian, who over the course of only a few months brought me to the point where I often forget I had ever suffered a severe injury.”</p>
-
-	        							<cite>Nancy B. <span>Writer</span></cite>
-	        						</blockquote>
-	        					</li>
-	        				</ul>
-	        		</div><!-- flexslider -->
 	        	</div><!-- inner-wrap -->
         	</section><!-- testimonials -->
         </main><!-- #main -->

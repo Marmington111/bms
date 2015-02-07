@@ -12,7 +12,7 @@
  */
 
 
-add_filter( 'rwmb_meta_boxes', 'bms_register_meta_boxes' );
+add_filter( 'rwmb_meta_boxes', 'your_prefix_register_meta_boxes' );
 
 /**
  * Register meta boxes
@@ -23,7 +23,7 @@ add_filter( 'rwmb_meta_boxes', 'bms_register_meta_boxes' );
  *
  * @return array
  */
-function bms_register_meta_boxes( $meta_boxes )
+function your_prefix_register_meta_boxes( $meta_boxes )
 {
 	/**
 	 * prefix of meta keys (optional)
@@ -58,103 +58,27 @@ function bms_register_meta_boxes( $meta_boxes )
 			// TEXT
 			array(
 				// Field name - Will be used as label
-				'name'  => __( 'cite', 'meta-box' ),
+				'name'  => __( 'Author Name', 'meta-box' ),
 				// Field ID, i.e. the meta key
-				'id'    => "{$prefix}cite",
+				'id'    => '{$prefix}cite_author',
 				// Field description (optional)
-				'desc'  => __( 'Text description', 'meta-box' ),
+				'desc'  => __( 'The name of the person that gave the testimonial.', 'meta-box' ),
 				'type'  => 'text',
 				// Default value (optional)
-				'std'   => __( 'Default text value', 'meta-box' ),
-				// CLONES: Add to make the field cloneable (i.e. have multiple value)
-				'clone' => true,
+				'std'   => __( ' ', 'meta-box' )
 			),
 			array(
 				// Field name - Will be used as label
-				'name'  => __( 'by', 'meta-box' ),
+				'name'  => __( 'Occupation', 'meta-box' ),
 				// Field ID, i.e. the meta key
-				'id'    => "{$prefix}by",
+				'id'    => "{$prefix}author_profession",
 				// Field description (optional)
-				'desc'  => __( 'Text description', 'meta-box' ),
+				'desc'  => __( 'Occupation of the person that gave the testimonial.', 'meta-box' ),
 				'type'  => 'text',
 				// Default value (optional)
-				'std'   => __( ' ', 'meta-box' ),
-				// CLONES: Add to make the field cloneable (i.e. have multiple value)
-				'clone' => true,
+				'std'   => __( ' ', 'meta-box' )
 			),
-			// CHECKBOX
-			array(
-				'name' => __( 'Checkbox', 'meta-box' ),
-				'id'   => "{$prefix}checkbox",
-				'type' => 'checkbox',
-				// Value can be 0 or 1
-				'std'  => 1,
-			),
-			// RADIO BUTTONS
-			array(
-				'name'    => __( 'Radio', 'meta-box' ),
-				'id'      => "{$prefix}radio",
-				'type'    => 'radio',
-				// Array of 'value' => 'Label' pairs for radio options.
-				// Note: the 'value' is stored in meta field, not the 'Label'
-				'options' => array(
-					'value1' => __( 'Label1', 'meta-box' ),
-					'value2' => __( 'Label2', 'meta-box' ),
-				),
-			),
-			// SELECT BOX
-			array(
-				'name'        => __( 'Select', 'meta-box' ),
-				'id'          => "{$prefix}select",
-				'type'        => 'select',
-				// Array of 'value' => 'Label' pairs for select box
-				'options'     => array(
-					'value1' => __( 'Label1', 'meta-box' ),
-					'value2' => __( 'Label2', 'meta-box' ),
-				),
-				// Select multiple values, optional. Default is false.
-				'multiple'    => false,
-				'std'         => 'value2',
-				'placeholder' => __( 'Select an Item', 'meta-box' ),
-			),
-			// HIDDEN
-			array(
-				'id'   => "{$prefix}hidden",
-				'type' => 'hidden',
-				// Hidden field must have predefined value
-				'std'  => __( 'Hidden value', 'meta-box' ),
-			),
-			// PASSWORD
-			array(
-				'name' => __( 'Password', 'meta-box' ),
-				'id'   => "{$prefix}password",
-				'type' => 'password',
-			),
-			// TEXTAREA
-			array(
-				'name' => __( 'Textarea', 'meta-box' ),
-				'desc' => __( 'Textarea description', 'meta-box' ),
-				'id'   => "{$prefix}textarea",
-				'type' => 'textarea',
-				'cols' => 20,
-				'rows' => 3,
-			),
-		),
-		'validation' => array(
-			'rules'    => array(
-				"{$prefix}password" => array(
-					'required'  => true,
-					'minlength' => 7,
-				),
-			),
-			// optional override of default jquery.validate messages
-			'messages' => array(
-				"{$prefix}password" => array(
-					'required'  => __( 'Password is required', 'meta-box' ),
-					'minlength' => __( 'Password must be at least 7 characters', 'meta-box' ),
-				),
-			)
-		)
+		)	
 	);
 
 	// 2nd meta box
