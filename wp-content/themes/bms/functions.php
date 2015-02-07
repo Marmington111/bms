@@ -213,144 +213,14 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
- * Register Custom Post Type: 'Testimonials'
+ * Custom post types
  */
-function bms_register_post_type_testimonail() {
-
-	$labels = array(
-		'name'               => __( 'Testimonials', 'bms' ),
-		'singular_name'      => __( 'Testimonail', 'bms' ),
-		'add_new'            => __( 'Add New', 'bms' ),
-		'add_new_item'       => __( 'Add New Testimonials', 'bms' ),
-		'edit_item'          => __( 'Edit Testimonials', 'bms' ),
-		'new_item'           => __( 'New Testimonials', 'bms' ),
-		'view_item'          => __( 'View Testimonials', 'bms' ),
-		'search_items'       => __( 'Search Testimonials', 'bms' ),
-		'not_found'          => __( 'No Testimonials found', 'bms' ),
-		'not_found_in_trash' => __( 'No Testimonials found in Trash', 'bms' ),
-		'parent_item_colon'  => __( 'Parent Testimonials:', 'bms' ),
-		'menu_name'          => __( 'Testimonials', 'bms' ),
-	);
-
-	$args = array(
-		'labels'              => $labels,
-		'hierarchical'        => false,
-		'supports'            => array( 'title', 'editor', ),
-		'taxonomies'          => array( 'Testimonail-categories' ),
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'publicly_queryable'  => true,
-		'exclude_from_search' => true,
-		'has_archive'         => true,
-		'query_var'           => true,
-		'can_export'          => true,
-		'rewrite'             => array( 'slug' => 'Testimonail-item' ),
-		'capability_type'     => 'post',
-		'menu_position'       => null
-	);
-
-	register_post_type( 'testimonials', apply_filters( 'bms_register_post_type_testimonail', $args ) );
-
-} 
-add_action('init', 'bms_register_post_type_testimonail');
+include get_template_directory() . '/inc/custom-post-types.php';
 
 /**
- * Register Custom Post Type: 'Highlights'
+ * Custom meta boxes
  */
-function bms_register_post_type_highlights() {
-
-	$labels = array(
-		'name'               => __( 'Highlights', 'bms' ),
-		'singular_name'      => __( 'Testimonail', 'bms' ),
-		'add_new'            => __( 'Add New', 'bms' ),
-		'add_new_item'       => __( 'Add New Highlight', 'bms' ),
-		'edit_item'          => __( 'Edit Highlight', 'bms' ),
-		'new_item'           => __( 'New Highlight', 'bms' ),
-		'view_item'          => __( 'View Highlights', 'bms' ),
-		'search_items'       => __( 'Search Highlights', 'bms' ),
-		'not_found'          => __( 'No Highlights found', 'bms' ),
-		'not_found_in_trash' => __( 'No Highlights found in Trash', 'bms' ),
-		'parent_item_colon'  => __( 'Parent Highlight:', 'bms' ),
-		'menu_name'          => __( 'Highlights', 'bms' ),
-	);
-
-	$args = array(
-		'labels'              => $labels,
-		'hierarchical'        => false,
-		'supports'            => array( 'title', 'editor', ),
-		'taxonomies'          => array( 'Highlight-categories' ),
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'publicly_queryable'  => true,
-		'exclude_from_search' => true,
-		'has_archive'         => true,
-		'query_var'           => true,
-		'can_export'          => true,
-		'rewrite'             => array( 'slug' => 'Highlights-item' ),
-		'capability_type'     => 'post',
-		'menu_position'       => null
-	);
-
-	register_post_type( 'highlights', apply_filters( 'bms_register_post_type_highlights', $args ) );
-
-} 
-add_action( 'init', 'bms_register_post_type_highlights' );
-
-/**
- * Include demo.php for meta-box
- */
-
-add_filter( 'rwmb_meta_boxes', 'bms_register_meta_boxes' );
-
-function bms_register_meta_boxes( $meta_boxes )
-{
-    $prefix = 'rw_';
-
-    // Testimonials
-    $meta_boxes[] = array(
-        'id'       => 'testimonialmeta',
-        'title'    => 'Testimonial Meta',
-        'pages'    => array( 'testimonials' ),
-        'context'  => 'normal',
-        'priority' => 'high',
-
-        'fields' => array(
-            array(
-                'name'  => 'Author Name',
-                'desc'  => 'Name of the person that gave the testimonial',
-                'id'    => $prefix . 'author',
-                'type'  => 'text',
-                'class' => 'custom-class',
-            ),
-        )
-    );
-     // Highlights
-    $meta_boxes[] = array(
-        'id'       => 'highlightmeta',
-        'title'    => 'Highlights',
-        'pages'    => array( 'highlights' ),
-        'context'  => 'normal',
-        'priority' => 'high',
-
-        'fields' => array(
-            array(
-                'name'  => 'Highlight',
-                'desc'  => 'List of highlights for each section',
-                'id'    => $prefix . 'highlight_item',
-                'type'  => 'text',
-                'class' => 'custom-class',
-                'clone' => true,
-            ),
-        )
-    );
-
-
-    return $meta_boxes;
-}
+ include get_template_directory() . '/inc/meta-box.php';
 
 /**
  * disable the wpautop filter
