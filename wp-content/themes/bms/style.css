@@ -481,8 +481,16 @@ input[type="search"],
 textarea {
 	color: #666;
 	border: 1px solid #ccc;
-	font-family:'Roboto Slab', serif;
-	padding:8px;
+	padding:12px;
+	font-weight: 300;	
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	width: 100%;
 }
 
 input[type="text"]:focus,
@@ -494,17 +502,26 @@ textarea:focus {
 	color: #111;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-	padding: 3px;
+textarea {
+	width: 100%;
 }
 
-textarea {
-	padding-left: 3px;
-	width: 100%;
+.page-id-19 form {
+	padding-top: 32px;
+}
+
+.page-id-19 form p {
+	float: left;
+	margin-bottom: 24px;
+	width:48.4%;
+}
+
+.page-id-19 form p:nth-child(6) {
+	width:100%;
+}
+
+.page-id-19 form p:nth-child(2n+2) {
+	margin-right: 3.2%;
 }
 
 /*--------------------------------------------------------------
@@ -2235,6 +2252,10 @@ X.X About - Bio Section
 	line-height: 76px;
 	padding: 4px 8px 0 3px;
 }
+
+/*--------------------------------------------------------------
+X.X Contact
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 11.0 Infinite scroll

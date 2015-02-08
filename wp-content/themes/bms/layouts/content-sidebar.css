@@ -25,7 +25,8 @@ Layout: Content-Sidebar
     background: hsl(0, 0%, 100%);
 }
 
-.site-content .widget-area {
+.site-content .widget-area,
+.site-content .contact-widget-area {
 	background: #fff;
 	float: right;
 	margin-left: 2%;
