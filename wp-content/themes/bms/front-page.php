@@ -68,12 +68,10 @@ get_header(); ?>
 
 					$loop = new WP_Query( $high );
 
-		        	echo '<div class="write-up-wrap clearfix">';
 					while ( $loop->have_posts() ) : $loop->the_post();
+			        	echo '<div class="write-up-wrap clearfix">';
 							echo '<div class="wu-image span-seven">';
-							$himg = rwmb_meta( 'rw_highimg' );
-
-							echo '{$img}';
+							the_post_thumbnail();
 							echo '</div>';
 
 						echo '<div class="wu-content span-five">';
@@ -91,8 +89,8 @@ get_header(); ?>
 							}
 							echo '</ul>';
 						echo '</div>';
-					endwhile;
 					echo '</div>';
+					endwhile;
 					?>
 
         		</div><!-- inner-wrap -->

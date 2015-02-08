@@ -8,22 +8,38 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
-			if (has_post_thumbnail()) {
-			    echo '<div class="bio-header clearfix">';
-				    echo '<div class="bio-pic">';
-					    echo the_post_thumbnail('index-thumb');
-				    echo '</div>';
-				    echo '<div class="bio-intro">';
-					    echo '<div class="bio-name">Brian Muccio</div>';
-					    echo '<div class="bio-blurb">Motherfucker do that shit to me, he better paralyze my ass, ’cause I’ll kill the motherfucker, know what I’m sayin’? You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out.</div>';
-					    echo '<p class="bio-cat"><i class="fa fa-star"></i><span>Position:</span> Owner/Trianer</p>';
-					    echo '<p class="bio-cat"><i class="fa fa-university"></i><span>Experience:</span> Over 10 years</p>';
-					    echo '<p class="bio-cat"><i class="fa fa-thumbs-up"></i><span>Qualifications:</span> Master of movement</p>';
-				    echo '</div>';
-				echo '</div>';
-			}
-		?>
+	<?php
+		$args = array( 
+			'post_type'			=> 'bio', 
+			'post_status'		=> 'publish',
+		);
+
+		$bio = new WP_Query( $args );
+		if ( $bio->have_posts() ) {
+	?>		
+	    <div class="bio-header clearfix">
+		    <div class="bio-pic">
+			    <?php the_post_thumbnail('bio-thumb'); ?>
+		    </div>
+
+		    <div class="bio-intro">
+			    <div class="bio-name">
+				    <?php the_title(); ?>
+			    </div>'
+			    <div class="bio-blurb">
+				    <?php the_content(); ?>
+			    </div>
+			    <p class="bio-cat"><i class="fa fa-star"></i><span>Position:</span>
+				    <?php echo rwmb_meta( 'rw_position' ); ?>
+			    </p>
+			    <p class="bio-cat"><i class="fa fa-university"></i><span>Experience:</span> 
+				    <?php echo rwmb_meta( 'rw_experience' ); ?>
+			    </p>
+			    <p class="bio-cat"><i class="fa fa-thumbs-up"></i><span>Qualifications:</span>
+				    <?php echo rwmb_meta( 'rw_qualify' ); ?>
+			    </p>
+		    </div>
+		</div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content span-twelve">
@@ -40,3 +56,4 @@
 		<?php edit_post_link( __( 'Edit', 'bms' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+<?php } ?>

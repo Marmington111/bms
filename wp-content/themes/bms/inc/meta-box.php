@@ -37,31 +37,53 @@ function bms_register_meta_boxes( $meta_boxes )
 
     // Highlights
     $meta_boxes[] = array(
-        'id'        => 'testimonialmeta',
-        'title'     => 'Highlight Items',
-        'pages'     => array( 'highlights' ),
+        'id'        => 'biometa',
+        'title'     => 'Biography',
+        'pages'     => array( 'bio' ),
         'context'   => 'normal',
         'priority'  => 'high',
 
         'fields' => array(
-            // IMAGE ADVANCED (WP 3.5+)
             array(
-                'name' => 'Image Upload',
-                'id'   => $prefix . 'highimg',
-                'type' => 'image'
-            ),
-            array(
-                'name'  => 'Highlight Item',
+                'name'  => 'Highlights',
                 'desc'  => 'Name of the person that gave the testimonial',
                 'id'    => $prefix . 'hitem',
                 'type'  => 'text',
                 'class' => 'custom-class',
                 'clone' => true
-            )
+            ),
         )
     );
 
+    // Bio
+    $meta_boxes[] = array(
+        'id'        => 'biometa',
+        'title'     => 'Biography',
+        'pages'     => array( 'bio' ),
+        'context'   => 'normal',
+        'priority'  => 'high',
 
+        'fields' => array(
+            array(
+                'name'  => 'Position',
+                'id'    => $prefix . 'position',
+                'type'  => 'text',
+                'class' => 'custom-class'
+            ),
+            array(
+                'name'  => 'Experience',
+                'id'    => $prefix . 'experience',
+                'type'  => 'text',
+                'class' => 'custom-class'
+            ),
+            array(
+                'name'  => 'Qualifications',
+                'id'    => $prefix . 'qualify',
+                'type'  => 'text',
+                'class' => 'custom-class'
+            )
+        )
+    );
 
     return $meta_boxes;
 }

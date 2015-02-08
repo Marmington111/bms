@@ -66,7 +66,7 @@ function bms_register_post_type_highlights() {
 	$args = array(
 		'labels'              => $labels,
 		'hierarchical'        => false,
-		'supports'            => array( 'title', 'editor', ),
+		'supports'            => array( 'title', 'editor', 'thumbnail' ),
 		'taxonomies'          => array( 'Testimonail-categories' ),
 		'public'              => true,
 		'show_ui'             => true,
@@ -86,3 +86,47 @@ function bms_register_post_type_highlights() {
 
 } 
 add_action('init', 'bms_register_post_type_highlights');
+
+/**
+ * Register Custom Post Type: 'Bio'
+ */
+function bms_register_post_type_bio() {
+
+	$labels = array(
+		'name'               => __( 'Bio', 'bms' ),
+		'singular_name'      => __( 'Bio', 'bms' ),
+		'add_new'            => __( 'Add New', 'bms' ),
+		'add_new_item'       => __( 'Add New ', 'bms' ),
+		'edit_item'          => __( 'Edit Bio', 'bms' ),
+		'new_item'           => __( 'New Bio', 'bms' ),
+		'view_item'          => __( 'View Bio', 'bms' ),
+		'search_items'       => __( 'Search Bio', 'bms' ),
+		'not_found'          => __( 'No Bio found', 'bms' ),
+		'not_found_in_trash' => __( 'No Bio found in Trash', 'bms' ),
+		'parent_item_colon'  => __( 'Parent Bio:', 'bms' ),
+		'menu_name'          => __( 'Bio', 'bms' ),
+	);
+
+	$args = array(
+		'labels'              => $labels,
+		'hierarchical'        => false,
+		'supports'            => array( 'title', 'editor', 'thumbnail' ),
+		'taxonomies'          => array( 'Bio-categories' ),
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'publicly_queryable'  => true,
+		'exclude_from_search' => true,
+		'has_archive'         => true,
+		'query_var'           => true,
+		'can_export'          => true,
+		'rewrite'             => array( 'slug' => 'Bio-item' ),
+		'capability_type'     => 'post',
+		'menu_position'       => null
+	);
+
+	register_post_type( 'bio', apply_filters( 'bms_register_post_type_bio', $args ) );
+
+} 
+add_action('init', 'bms_register_post_type_bio');
