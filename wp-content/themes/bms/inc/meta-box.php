@@ -85,5 +85,23 @@ function bms_register_meta_boxes( $meta_boxes )
         )
     );
 
+     // Bio
+    $meta_boxes[] = array(
+        'id'        => 'servicesmeta',
+        'title'     => 'Services',
+        'pages'     => array( 'services' ),
+        'context'   => 'normal',
+        'priority'  => 'high',
+
+        'fields' => array(
+            array(
+                'name'  => 'Position',
+                'id'    => $prefix . 'position',
+                'type'  => 'text',
+                'class' => 'custom-class'
+            )
+        )
+    );
+
     return $meta_boxes;
 }

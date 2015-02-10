@@ -130,3 +130,47 @@ function bms_register_post_type_bio() {
 
 } 
 add_action('init', 'bms_register_post_type_bio');
+
+/**
+ * Register Custom Post Type: 'Services'
+ */
+function bms_register_post_type_services() {
+
+	$labels = array(
+		'name'               => __( 'Services', 'bms' ),
+		'singular_name'      => __( 'Service', 'bms' ),
+		'add_new'            => __( 'Add New', 'bms' ),
+		'add_new_item'       => __( 'Add New ', 'bms' ),
+		'edit_item'          => __( 'Edit Service', 'bms' ),
+		'new_item'           => __( 'New Service', 'bms' ),
+		'view_item'          => __( 'View Service', 'bms' ),
+		'search_items'       => __( 'Search Services', 'bms' ),
+		'not_found'          => __( 'No Services found', 'bms' ),
+		'not_found_in_trash' => __( 'No Services found in Trash', 'bms' ),
+		'parent_item_colon'  => __( 'Parent Service:', 'bms' ),
+		'menu_name'          => __( 'Services', 'bms' ),
+	);
+
+	$args = array(
+		'labels'              => $labels,
+		'hierarchical'        => false,
+		'supports'            => array( 'title', 'editor', 'thumbnail' ),
+		'taxonomies'          => array( 'Services-categories' ),
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'publicly_queryable'  => true,
+		'exclude_from_search' => true,
+		'has_archive'         => true,
+		'query_var'           => true,
+		'can_export'          => true,
+		'rewrite'             => array( 'slug' => 'Services-item' ),
+		'capability_type'     => 'post',
+		'menu_position'       => null
+	);
+
+	register_post_type( 'services', apply_filters( 'bms_register_post_type_services', $args ) );
+
+} 
+add_action('init', 'bms_register_post_type_services');

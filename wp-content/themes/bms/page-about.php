@@ -32,10 +32,10 @@ get_header(); ?>
 						echo '<p class="bio-cat"><i class="fa fa-star"></i><span>Position: </span>';
 							echo rwmb_meta( 'rw_position' );
 						echo '</p>';
-						echo '<p class="bio-cat"><i class="fa fa-university"></i><span>Position: </span>';
+						echo '<p class="bio-cat"><i class="fa fa-university"></i><span>Experience: </span>';
 							echo rwmb_meta( 'rw_experience' );
 						echo '</p>';
-						echo '<p class="bio-cat"><i class="fa fa-thumbs-up"></i><span>Position: </span>';
+						echo '<p class="bio-cat"><i class="fa fa-thumbs-up"></i><span>Qualifications: </span>';
 							echo rwmb_meta( 'rw_qualify' );
 						echo '</p>';
 					echo '</div>';// bio-intro

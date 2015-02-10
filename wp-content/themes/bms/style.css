@@ -2254,6 +2254,36 @@ X.X About - Bio Section
 }
 
 /*--------------------------------------------------------------
+X.X Services
+--------------------------------------------------------------*/
+.service-wrap {
+	padding: 32px 0;
+}
+
+.a-service {
+	float:left;
+	margin: 0 1.6% 64px 0;
+	padding: 16px;
+	background: #efefef;
+}
+
+.a-service:nth-child(3n+3) {
+	margin-right: 0;
+}
+
+.service-thumb {
+	background: #fff;
+	border: 1px solid #efefef;
+	height: 225px;
+	overflow: hidden;
+}
+
+.service-content {}
+
+.service-title {}
+
+.servic-blurb {}
+/*--------------------------------------------------------------
 X.X Contact
 --------------------------------------------------------------*/
 
