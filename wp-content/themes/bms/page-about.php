@@ -6,6 +6,7 @@
  */
 
 get_header(); ?>
+
 <div class="inner-wrap clearfix">
 	<div id="primary" class="content-area span-twelve clearfix">
 		<main id="main" class="site-main" role="main">

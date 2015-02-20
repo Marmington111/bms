@@ -166,11 +166,7 @@ function bms_scripts() {
     
     wp_enqueue_style( 'bms-font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' );
 
-    // wp_enqueue_style( 'bms-jquery-ui-css', 'http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css' );
-
     wp_enqueue_style( 'bms-flexslider-style', get_template_directory_uri() . '/css/flexslider.css' );
-
-    wp_enqueue_script( 'bms-jquery-ui-js', 'http://code.jquery.com/ui/1.11.2/jquery-ui.js', true );
 
     wp_enqueue_script( 'bms-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20150115', true );
 
@@ -186,7 +182,7 @@ function bms_scripts() {
 
 	wp_enqueue_script( 'bms-flexslider-settings', get_template_directory_uri() . '/js/flexslider-settings.js', array('bms-flexslider'), '20150122', true );
 
-	wp_enqueue_script( 'bms-accordion-settings', get_template_directory_uri() . '/js/accordion-settings.js', array('jquery'), '20150128', true );
+	// wp_enqueue_script( 'bms-accordion-settings', get_template_directory_uri() . '/js/accordion-settings.js', array('jquery'), '20150128', true );
 
 	wp_enqueue_script( 'bms-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20110116', true );
                 

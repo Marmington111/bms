@@ -441,15 +441,18 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    background: #3c3c3c;
-    border: none;
-    border-radius: 3px;
+    background: #2C86BA;
+    border-top:none;
+    border-left:none;
+    border-right: 3px solid #0D6A9E;
+    border-bottom: 3px solid #0D6A9E;
     color: #FFF;
     cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-    font-family: 'Lato';
+    font-family: 'Robot Slab', serif;
     font-size: 16px;
     font-size: 1rem;
     line-height: 1;
+    outline: none;
 	padding: 1em 2em;
     text-transform: uppercase;
     -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
@@ -459,7 +462,10 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: #000;
+	background: #23477D;
+	border-bottom: 2px solid #003A7D;
+	border-right: 2px solid #003A7D;
+	margin-top: 1px;
 }
 
 button:focus,
@@ -470,7 +476,10 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	background: #000;
+	background: #23477D;
+	border-bottom: 1px solid #003A7D;
+	border-right: 1px solid #003A7D;
+	margin-top: 2px;
 }
 
 input[type="text"],
@@ -506,8 +515,8 @@ textarea {
 	width: 100%;
 }
 
-.page-id-19 form {
-	padding-top: 32px;
+.page-id-19 .site-maine h2.widget-title {
+
 }
 
 .page-id-19 form p {
@@ -616,13 +625,13 @@ a:active {
     float: left;
     padding: 0;
     position: absolute;
-    left: 0;
+    /*left: 0;*/
     top: inherit;
     z-index: 99999;
 }
 .main-navigation ul ul ul {
 	background: #efefef;
-	border-top: 2px solid 68C8FF;
+	border-top: 2px solid #68C8FF;
 	left: -999em;
 	top: -2px;
 }
@@ -631,6 +640,10 @@ a:active {
 	line-height: 16px;
 	line-height: 1rem;
 	width: 200px;
+}
+
+.main-navigation ul ul li {
+	float:none;
 }
 
 .main-navigation ul ul li,
@@ -1096,7 +1109,7 @@ X.X Header
 X.X Header Search 
 --------------------------------------------------------------*/
 .search-toggle {
-	background:#B8E4FF;
+	background: #2C86BA;
     color: #fff;
     cursor: pointer;
     float: right;
@@ -1108,7 +1121,7 @@ X.X Header Search
 
 .search-toggle:hover,
 .search-toggle.active {
-    background: #25064C;
+    background: #23477D;
 }
 
 @media screen and (max-width: 600px) {
@@ -1132,7 +1145,7 @@ input[type="search"] {
 }
 
 .search-box {
-    background: #25064C;
+    background: #23477D;
     padding: .5em 0;
 }
 
@@ -1337,7 +1350,6 @@ X.X Header Responsive
 10.2 Top-Bar
 --------------------------------------------------------------*/
 .site-header{
-	border-bottom: 1px solid #efefef;
 }
 
 .top-bar{
@@ -1391,8 +1403,12 @@ Index and Archive
 --------------------------------------------------------------*/
 .page-title{
 	background:#25064C;	
-	margin: 55px 0 0;
-	padding:40px 0 40px 0;
+	margin-bottom: 32px;
+	padding:16px 0 48px 0;
+}
+
+.page-id-11 .page-title {
+	margin-bottom: 48px;
 }
 
 .title,
@@ -2049,7 +2065,7 @@ X.X Home Page - Icon Section
 
 .intro-icon i{
 	font-size: 52px;
-	color: #B8E4FF;
+	color: #2C86BA;
 }
 
 .icon-title{
@@ -2152,6 +2168,7 @@ X.X Home Page - Testimonials
 
 .testimonials .flexslider { 
 	background: #fff; 
+	margin-bottom: 48px;
 	position: relative; 
 }
 
@@ -2160,16 +2177,6 @@ X.X Home Page - Testimonials
 	font-weight: 300;
 	padding: 1em 3em 0em;
 }
-
-/*.testimonials blockquote:before{
-    color: #efefef;
-	content: '"';
-	font-family: 'Open Sans';
-	font-size: 122px;
-	position: absolute;
-	left: 1258px;
-	top: 49px;
-}*/
 
 .testimonials cite{
     color: #666;
@@ -2238,16 +2245,19 @@ X.X About - Bio Section
 	font-weight: 900;
 }
 
-.page-id-9 .entry-content p:first-child{
+.page-id-9 .entry-content p:first-child,
+.page-id-11 .entry-content p:first-child,
+.page-id-13 .entry-content p:first-child{
 	color: #818181;
 	font-size: 24px;
 }
 
 .page-id-9 .entry-content p:first-child::first-letter,
-.page-id-13 .entry-content p:nth-child(2)::first-letter{
+.page-id-11 .entry-content p:first-child::first-letter,
+.page-id-13 .entry-content p:first-child::first-letter{
 	color: #25064C;
 	float: left;
-	font-size: 103px;
+	font-size: 106px;
 	font-weight: 700;
 	line-height: 76px;
 	padding: 4px 8px 0 3px;
@@ -2256,9 +2266,8 @@ X.X About - Bio Section
 /*--------------------------------------------------------------
 X.X Services
 --------------------------------------------------------------*/
-.service-wrap {
-	padding: 32px 0;
-}
+.page-id-11 
+
 
 .a-service {
 	float:left;

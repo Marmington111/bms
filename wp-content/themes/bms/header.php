@@ -76,16 +76,27 @@
 				    </div>
 			</div> 
 
-			<?php if (! is_front_page() ) { ?>
-	            <div class="page-title">
-	                <div class="inner-wrap clearfix">
-	                    <h2 class="title"><?php echo get_the_title(); ?></h2>
-	                    <p class="breadcrumbs">
-	                        <a href="index.html">Home</a><i class="fa fa-angle-right"></i><strong>Locations</strong>
-	                    </p>
-	                </div><!-- .inner-wrap -->
-	            </div><!-- .page-title -->
-	        <?php } ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+	
+	<?php if ( ! is_front_page() && ! is_search() ) { ?>
+        <div class="page-title">
+            <div class="inner-wrap clearfix">
+                <h2 class="title"><?php echo get_the_title(); ?></h2>
+                <p class="breadcrumbs">
+                    <a href="index.html">Home</a><i class="fa fa-angle-right"></i><strong>Locations</strong>
+                </p>
+            </div>
+        </div>
+    <?php } ?>
+    <?php if ( is_search() ) {?>
+    <div class="page-title">
+        <div class="inner-wrap clearfix">
+            <h2 class="title"><?php printf( __( 'Search Results for: %s', 'bms' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+            <p class="breadcrumbs">
+                <a href="index.html">Home</a><i class="fa fa-angle-right"></i><strong>Locations</strong>
+            </p>
+        </div>
+    </div>
+    <?php } ?>
