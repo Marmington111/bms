@@ -2272,6 +2272,7 @@ X.X Services
 .a-service {
 	float:left;
 	margin: 0 1.6% 64px 0;
+	height: 580px;
 	padding: 16px;
 	background: #efefef;
 }
@@ -2283,8 +2284,11 @@ X.X Services
 .service-thumb {
 	background: #fff;
 	border: 1px solid #efefef;
-	height: 225px;
-	overflow: hidden;
+	padding: 8px 8px 0px;
+}
+
+.service-thumb img{
+	border: 1px solid #efefef;
 }
 
 .service-content {}
