@@ -129,15 +129,15 @@ function bms_widgets_init() {
 		'after_title'   => '<i></i></span></h1>',
 	) );
 
-	// Intro Icons Widget
+	// Icon Widget
 	register_sidebar( array(
-		'name'          => __( 'Intro Icons Widget', 'bms' ),
-		'description'   => __( 'Icon widget that appears on the homepage.', 'bms' ),
-		'id'            => 'intro_icons',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'name'          => __( 'Icon Widget', 'bms' ),
+		'description'   => __( 'Icon Widget area appears on the home page just under the Intro Section.', 'bms' ),
+		'id'            => 'intro-icons',
+		'before_widget' => '<div id="%1$s" class="intro-icon %2$s span-four">',
+		'after_widget'  => '</div>',
+		// 'before_title'  => '<h1 class="section-title star"><span>',
+		// 'after_title'   => '<i></i></span></h1>',
 	) );
 
 	// Call to Action Widget

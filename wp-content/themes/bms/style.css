@@ -1081,7 +1081,7 @@ X.X Header
     font-size: 2.5rem;
     text-transform: uppercase;
     line-height: normal;
-    padding-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 .site-description {
@@ -2163,7 +2163,7 @@ X.X Home Page - Call to Action
 }
 
 /*--------------------------------------------------------------
-X.X Home Page - Testimonials
+X.X Testimonials
 --------------------------------------------------------------*/
 
 .testimonials .flexslider { 
@@ -2172,25 +2172,42 @@ X.X Home Page - Testimonials
 	position: relative; 
 }
 
-.testimonials blockquote{
+.testimonials blockquote {
 	font-size: 22px;
 	font-weight: 300;
 	padding: 1em 3em 0em;
 }
 
-.testimonials cite{
+.page-id-192 blockquote {
+	margin-bottom: 64px;
+}
+
+.page-id-192 blockquote p {
+	font-size: 18px;
+}
+
+.testimonials cite,
+.page-id-192 cite{
     color: #666;
+    display: block;
     font-size:16px;
     font-style:normal;
     font-weight:700;
+    margin-top: 24px;
 }
 
-.testimonials cite span{
+.page-id-192 cite {
+	font-size: 24px;
+}
+
+.testimonials cite span,
+.page-id-192 cite span{
     color:#B296D1;
     font-weight:300;
 }
 
-.testimonials cite span:before{
+.testimonials cite span:before,
+.page-id-192 cite span:before {
     content:' - ';
 }
 
