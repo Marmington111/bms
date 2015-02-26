@@ -1005,6 +1005,8 @@ final class WP_Customize_Manager {
 			'section'    => 'title_tagline',
 		) );
 
+		
+
 		/* Colors */
 
 		$this->add_section( 'colors', array(

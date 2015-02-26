@@ -12,12 +12,25 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content span-twelve">
-		<?php echo rwmb_meta( 'rw_biography' ); ?>
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'bms' ),
-				'after'  => '</div>',
-			) );
+		$test = array( 
+			'post_type'			=> 'testimonials', 
+			'posts_per_page'	=> 6
+		);
+
+		$loop = new WP_Query( $test );
+
+		while ( $loop->have_posts() ) : $loop->the_post();
+			echo '<blockquote>';
+				the_content();
+				echo '<cite>';
+				echo rwmb_meta( 'rw_author' );
+					echo '<span>';
+    					echo rwmb_meta( 'rw_job' );
+					echo '</span>';
+				echo '</cite>';
+			echo '</blockquote>';
+		endwhile;
 		?>
 	</div><!-- .entry-content -->
 

@@ -37,23 +37,7 @@ get_header(); ?>
 
         	<section class="intro-icons-wrap">
 	        	<div class="inner-wrap clearfix">
-		        	<div class="intro-icon span-four">
-		        		<i class="fa fa-bolt"></i>
-		        		<h1 class="icon-title">Dynamic Joint Mobility</h1><!-- icon-title -->
-		        		<p class="icon-content">Movement templates designed to restore full range of motion to every joint in the body.</p><!-- icon-content -->
-		        	</div><!-- intro-icon -->
-
-		        	<div class="intro-icon span-four">
-		        		<i class="fa fa-cogs"></i>
-		        		<h1 class="icon-title">Injury Rehabilitation</h1><!-- icon-title -->
-		        		<p class="icon-content">Heal existing injuries, correct poor posture, promote proper habits. Coordination and control will help eliminate pain.</p><!-- icon-content -->
-		        	</div><!-- intro-icon -->
-
-		        	<div class="intro-icon span-four">
-		        		<i class="fa fa-graduation-cap"></i>
-		        		<h1 class="icon-title">Neural Re-Education</h1><!-- icon-title -->
-		        		<p class="icon-content">The brain is the key to re-training the body’s movement patterns.</p><!-- icon-content -->
-		        	</div><!-- intro-icon -->
+	        		<?php get_sidebar( 'icon' ); ?>
 	        	</div><!-- inner-wrap -->
         	</section><!-- intro-icons-wrap -->
 
@@ -108,7 +92,7 @@ get_header(); ?>
 	        		<?php
 	        		$test = array( 
 	        			'post_type'			=> 'testimonials', 
-	        			'posts_per_page'	=> 5
+	        			'posts_per_page'	=> 6
 	        		);
 
 	        		$loop = new WP_Query( $test );
@@ -116,7 +100,7 @@ get_header(); ?>
 	        		echo '<div class="flexslider"><ul class="slides">';
 	        		while ( $loop->have_posts() ) : $loop->the_post();
 	        			echo '<li><blockquote>';
-	        				the_content();
+	        				echo rwmb_meta( 'rw_excerpt' );
 	        				echo '<cite>';
 	        				echo rwmb_meta( 'rw_author' );
 	        					echo '<span>';

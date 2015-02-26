@@ -1631,7 +1631,7 @@ Index and Archive
 }
 
 .byline .author a:hover{
-	color:#2c86baf;
+	color:#2c86ba;
 }
 .single .byline,
 .group-blog .byline {
@@ -2030,7 +2030,7 @@ X.X Home Page - Intro Section
 	position: relative;
 }
 
-.site-intro p{
+.site-intro div.textwidget {
 	font-size: 24px;
 }
 
@@ -2116,7 +2116,7 @@ X.X Home Page - Write Up Section
 
 .wu-content p{
 	color: #999;
-	font-size:16px;
+	font-size:22px;
 	margin-top:0;
 }
 
@@ -2247,14 +2247,16 @@ X.X About - Bio Section
 
 .page-id-9 .entry-content p:first-child,
 .page-id-11 .entry-content p:first-child,
-.page-id-13 .entry-content p:first-child{
+.page-id-13 .entry-content p:first-child,
+.page-id-17 .entry-content p:first-child{
 	color: #818181;
 	font-size: 24px;
 }
 
 .page-id-9 .entry-content p:first-child::first-letter,
 .page-id-11 .entry-content p:first-child::first-letter,
-.page-id-13 .entry-content p:first-child::first-letter{
+.page-id-13 .entry-content p:first-child::first-letter,
+.page-id-17 .entry-content p:first-child::first-letter{
 	color: #25064C;
 	float: left;
 	font-size: 106px;

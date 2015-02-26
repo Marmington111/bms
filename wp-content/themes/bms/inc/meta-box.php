@@ -19,6 +19,13 @@ function bms_register_meta_boxes( $meta_boxes )
 
         'fields' => array(
             array(
+                'name'  => 'Excerpt',
+                'desc'  => 'Small excerpt from the testimonial.',
+                'id'    => $prefix . 'excerpt',
+                'type'  => 'textarea',
+                'class' => 'custom-class'
+            ),
+            array(
                 'name'  => 'Author Name',
                 'desc'  => 'Name of the person that gave the testimonial',
                 'id'    => $prefix . 'author',
@@ -37,16 +44,16 @@ function bms_register_meta_boxes( $meta_boxes )
 
     // Highlights
     $meta_boxes[] = array(
-        'id'        => 'biometa',
-        'title'     => 'Biography',
-        'pages'     => array( 'bio' ),
+        'id'        => 'high-item',
+        'title'     => 'Highlights',
+        'pages'     => array( 'highlights' ),
         'context'   => 'normal',
         'priority'  => 'high',
 
         'fields' => array(
             array(
                 'name'  => 'Highlights',
-                'desc'  => 'Name of the person that gave the testimonial',
+                'desc'  => 'A list of highlight for each section',
                 'id'    => $prefix . 'hitem',
                 'type'  => 'text',
                 'class' => 'custom-class',
@@ -80,6 +87,13 @@ function bms_register_meta_boxes( $meta_boxes )
                 'name'  => 'Qualifications',
                 'id'    => $prefix . 'qualify',
                 'type'  => 'text',
+                'class' => 'custom-class'
+            ),
+
+            array(
+                'name'  => 'Bio',
+                'id'    => $prefix . 'biography',
+                'type'  => 'wysiwyg',
                 'class' => 'custom-class'
             )
         )

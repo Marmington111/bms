@@ -41,6 +41,14 @@ get_header(); ?>
 						echo '</p>';
 					echo '</div>';// bio-intro
 				echo '</div>';// bio-header
+				echo '<div class="entry-content span-twelve">';
+					echo rwmb_meta( 'rw_biography' );
+					// wp_link_pages( array(
+					// 	'before' => '<div class="page-links">' . __( 'Pages:', 'bms' ),
+					// 	'after'  => '</div>',
+					// ) );
+			
+				echo '</div><!-- .entry-content -->';
 			endwhile;
 			?>	
 

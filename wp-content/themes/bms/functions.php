@@ -132,7 +132,7 @@ function bms_widgets_init() {
 	// Intro Icons Widget
 	register_sidebar( array(
 		'name'          => __( 'Intro Icons Widget', 'bms' ),
-		'description'   => __( 'Footer widgets area appears in the footer of the site.', 'bms' ),
+		'description'   => __( 'Icon widget that appears on the homepage.', 'bms' ),
 		'id'            => 'intro_icons',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -234,7 +234,9 @@ include get_template_directory() . '/inc/custom-post-types.php';
 // remove_filter( 'the_content', 'wpautop' );
 // remove_filter( 'the_excerpt', 'wpautop' );
 
-
+/**
+* Customizer - Logo Upload
+*/
 
 /**
 * Example Widget Class
@@ -343,6 +345,8 @@ class bms_example_widget extends WP_Widget {
 
 }
 add_action('widgets_init', create_function('', 'return register_widget("bms_example_widget");'));
+
+
 
 
 
