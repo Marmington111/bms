@@ -26,8 +26,8 @@
             <div class="inner-wrap clearfix">
                 <div class="contact-info">
                     <ul class="clearfix">
-                        <li><i class="fa fa-phone">:</i>508.818.0109</li>
-                        <li><i class="fa fa-envelope">:</i>marmington111@gmail.com</li>
+                        <li><i class="fa fa-phone">:</i>(617) 290-4512</li>
+                        <li><i class="fa fa-envelope">:</i>brian@bodymovementsolutions.com</li>
                     </ul>
                 </div><!-- contact-info -->
 

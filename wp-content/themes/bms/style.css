@@ -1302,13 +1302,22 @@ X.X Header Responsive
 
 /* Footer widgets responsive */
 @media screen and (max-width: 879px) {
-    #footer-widgets { width: 100%!important; }
+    #footer-widgets { 
+    	width: 100%!important; 
+		padding: 0 1em;
+	}
     
     .footer-widgets .widget {
         float: none;
         width: 100%;
         margin: 0 0 8rem;
+
     }
+}
+
+@media screen and (max-width: 600px) {
+	#footer-widgets {
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1331,7 +1340,7 @@ X.X Header Responsive
 .span-eleven      {    width:  91.53%;   }
 .span-twelve      {    width:  100%;     }
 
-@media screen and (max-width: 813px) {
+@media screen and (max-width: 879px) {
     .span-one,
     .span-two,
     .span-three,
@@ -2106,6 +2115,7 @@ X.X Home Page - Write Up Section
 	padding: 0 0 1em 3em;
 	text-align: left;
 }
+
 .wu-title{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 32px;
@@ -2149,6 +2159,27 @@ X.X Home Page - Write Up Section
 	font-family: 'fontawesome';
 	margin-left: -15px;
 	margin-right: 12px;
+}
+
+@media screen and (max-width: 879px) {
+	.write-up-wrap{
+		margin-bottom:32px;
+	}
+
+	.write-up {
+		padding: 80px 0 0;
+	}
+
+	.wu-image{
+		float: none;
+		margin-bottom: 16px;
+	}
+
+	.wu-content{
+		float:none;
+		padding: 1em;
+	}
+	
 }
 
 /*--------------------------------------------------------------
@@ -2216,6 +2247,12 @@ X.X Testimonials
 	font-size:.88em;
 	font-style: italic;
 	font-weight:lighter;
+}
+
+@media screen and (max-width: 600px) {
+	.testimonials blockquote {
+		padding: 1em 1em 0;
+	}
 }
 
 /*--------------------------------------------------------------
