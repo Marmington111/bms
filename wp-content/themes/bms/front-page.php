@@ -71,11 +71,11 @@ get_header(); ?>
 
 					while ( $loop->have_posts() ) : $loop->the_post();
 			        	echo '<div class="write-up-wrap clearfix">';
-							echo '<div class="wu-image span-seven">';
+							echo '<div class="wu-image span-six">';
 							the_post_thumbnail();
 							echo '</div>';
 
-						echo '<div class="wu-content span-five">';
+						echo '<div class="wu-content span-six">';
 							echo '<h2 class="wu-title">';
 							the_title();
 							echo '</h2>';

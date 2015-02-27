@@ -399,7 +399,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 0;
 }
 
 ul {
@@ -442,10 +442,10 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     background: #2C86BA;
-    border-top:none;
-    border-left:none;
+    border:none;
+    /*border-left:none;
     border-right: 3px solid #0D6A9E;
-    border-bottom: 3px solid #0D6A9E;
+    border-bottom: 3px solid #0D6A9E;*/
     color: #FFF;
     cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
     font-family: 'Robot Slab', serif;
@@ -463,9 +463,9 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
 	background: #23477D;
-	border-bottom: 2px solid #003A7D;
+	/*border-bottom: 2px solid #003A7D;
 	border-right: 2px solid #003A7D;
-	margin-top: 1px;
+	margin-top: 1px;*/
 }
 
 button:focus,
@@ -477,8 +477,8 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
 	background: #23477D;
-	border-bottom: 1px solid #003A7D;
-	border-right: 1px solid #003A7D;
+	/*border-bottom: 1px solid #003A7D;
+	border-right: 1px solid #003A7D;*/
 	margin-top: 2px;
 }
 
@@ -668,7 +668,7 @@ a:active {
 }
 
 .main-navigation li a:hover{
-	background:#efefef;
+	background:#444;
 	/*color:#fff;*/
 }
 
@@ -728,6 +728,7 @@ a:active {
 		font-weight: normal;
 		height: 2.715em;
 		line-height: 2.715em;
+		/*margin-left: -14px;*/
 		padding: 0px 1em;
 		text-decoration: none;
 	}
@@ -1128,7 +1129,7 @@ X.X Header Search
     .search-toggle {
         position: absolute;
         top: 0;
-        right: 0;
+        right: 14px;
         margin-right: 0;
     }
 }
@@ -1389,6 +1390,12 @@ X.X Header Responsive
     margin-right:4px;
 }
 
+@media screen and (max-width: 560px) {
+	.top-bar {
+		display: none;
+	}
+}
+
 /*--------------------------------------------------------------
 Index and Archive
 --------------------------------------------------------------*/
@@ -1517,6 +1524,18 @@ Index and Archive
 .entry-content blockquote p {
     font-size: 24px;
     line-height: 1.5em;
+}
+
+@media screen and (max-width: 879px) {
+	.title {
+		display: block;
+		text-align: center;
+	}
+
+	.breadcrumbs {
+		display: block;
+		text-align: center;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -2086,6 +2105,27 @@ X.X Home Page - Icon Section
 	padding: 0 24px;
 }
 
+@media screen and (max-width: 879px) {
+	.intro-icon {
+		float:none;
+		margin: 0 auto 48px;
+		width: 60%;
+	}
+
+	.intro-icon:nth-child(3) {
+		margin-right: auto;
+	}
+
+	.intro-icon i{
+		font-size: 84px;
+		color: #2C86BA;
+	}
+
+	.icon-title{
+		font-size: 24px;
+	}
+}
+
 /*--------------------------------------------------------------
 X.X Home Page - Write Up Section
 --------------------------------------------------------------*/
@@ -2178,6 +2218,18 @@ X.X Home Page - Write Up Section
 	.wu-content{
 		float:none;
 		padding: 1em;
+		text-align: center;
+	}
+
+	.wu-highlights{
+		border-bottom: 2px solid #efefef;
+		font-family: 'Open Sans', sans-serif;
+		font-size:18px;
+		font-weight: 900;
+		margin: 0 auto 24px;
+		padding-bottom: 12px;
+		text-transform: uppercase;
+		width: 60%;
 	}
 	
 }
@@ -2210,7 +2262,7 @@ X.X Testimonials
 }
 
 .page-id-192 blockquote {
-	margin-bottom: 64px;
+	margin: 0 0 64px;
 }
 
 .page-id-192 blockquote p {
@@ -2266,10 +2318,11 @@ X.X About - Bio Section
 	border: 1px solid #efefef;
 	float: left;
 	padding: 8px 8px 2px;
+	width:37.5%;
 }
 
 .bio-intro{
-	padding-left: 500px;
+	padding-left: 40%;
 }
 
 .bio-name{
@@ -2317,6 +2370,83 @@ X.X About - Bio Section
 	font-weight: 700;
 	line-height: 76px;
 	padding: 4px 8px 0 3px;
+}
+
+@media screen and (max-width: 879px) {
+	.bio-pic {
+		width: 45%;
+	}
+
+	.bio-intro {
+		padding-left: 47.5%;
+	}
+
+	.bio-blurb {
+		border: none;
+		margin-bottom: 24%;
+	}
+
+	.bio-cat {
+		background: #F3f3f3;
+		margin-left: -90%;
+	}
+}
+
+@media screen and (max-width: 779px) {
+	.bio-blurb {
+		margin-bottom: 16%;
+	}
+}
+
+@media screen and (max-width: 679px) {
+	.bio-blurb {
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.bio-pic {
+		width: 75%;
+		float:none;
+		margin: 0 auto 32px;
+	}
+
+	.bio-intro {
+		margin: 0 auto;
+		padding-left: 0;
+		text-align: center;
+		width: 95%;
+	}
+
+	.bio-blurb {
+		border: none;
+		margin-bottom: 0;
+	}
+
+	.bio-cat {
+		background: #F3f3f3;
+		margin-left: 0;
+	}
+
+	.page-id-9 .entry-content p:first-child,
+	.page-id-11 .entry-content p:first-child,
+	.page-id-13 .entry-content p:first-child,
+	.page-id-17 .entry-content p:first-child{
+		font-size: 22px;
+	}
+
+	.page-id-9 .entry-content p:first-child::first-letter,
+	.page-id-11 .entry-content p:first-child::first-letter,
+	.page-id-13 .entry-content p:first-child::first-letter,
+	.page-id-17 .entry-content p:first-child::first-letter{
+		font-size: 94px;
+		font-weight: 900;
+		line-height: 76px;
+	}
+
+	.entry-content {
+		padding: 0 8px;
+	}
 }
 
 /*--------------------------------------------------------------
