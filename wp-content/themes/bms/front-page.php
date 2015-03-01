@@ -17,44 +17,13 @@ get_header(); ?>
         	<section class="site-intro">
         		<div class="inner-wrap">
 	           		<?php get_sidebar( 'intro' ); ?>
-
-	           		<!-- <h1 class="section-title star">
-	           			<span>
-		           			The First of its Kind
-
-		           			<i></i>
-	           			</span>
-	           		</h1>
-
-	           		<h2 class="section-content">
-	           			A revolutionary approach to <strong><em>injury rehabilitation</em></strong>. The nervous system is amazingly plastic and adaptable. More <strong><em>efficient movement patterns</em></strong> are the key to <strong><em>enjoying</em></strong> your favorite activities, sports, and <strong><em>life</em></strong>.
-	           		</h2> -->
            		</div><!-- inner-wrap -->
-
 	        	<div class="triangle"></div><!-- triangle -->
         	</section><!-- site-intro -->
-
 
         	<section class="intro-icons-wrap">
 	        	<div class="inner-wrap clearfix">
 	        		<?php get_sidebar( 'icon' ); ?>
-	        		<!-- <div class="intro-icon span-four">
-						<i class="fa fa-bolt"></i>
-						<h1 class="icon-title">Dynamic Joint Mobility</h1>
-						<p class="icon-content">Movement templates designed to restore full range of motion to every joint in the body.</p>
-					</div>
-
-					<div class="intro-icon span-four">
-						<i class="fa fa-cogs"></i>
-						<h1 class="icon-title">Injury Rehabilitation</h1>
-						<p class="icon-content">Heal existing injuries, correct poor posture, promote proper habits.</p>
-					</div>
-
-					<div class="intro-icon span-four">
-						<i class="fa fa-graduation-cap"></i>
-						<h1 class="icon-title">Neural Re-Education</h1>
-						<p class="icon-content">The brain is the key to re-training the body’s movement patterns.</p>
-					</div> -->
 	        	</div><!-- inner-wrap -->
         	</section><!-- intro-icons-wrap -->
 
@@ -99,8 +68,7 @@ get_header(); ?>
 
         	<section class="cta">
 	        	<div class="inner-wrap">
-	        		<?php get_sidebar( 'cta' ); ?>
-	        		<!-- <p><strong><em>Brian’s movement coaching</em></strong> can help you correct <strong><em>any</em></strong> physical difficulties you are having!</p> -->
+	        		<?php get_sidebar( 'cta' ); ?>	        		
 	        	</div>
         	</section>
 

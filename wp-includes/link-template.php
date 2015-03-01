@@ -2207,8 +2207,8 @@ function get_the_post_navigation( $args = array() ) {
 	) );
 
 	$navigation = '';
-	$previous   = get_previous_post_link( '<div class="nav-previous"><div class="nav-indicator">' . _x( 'Previous Post:', 'Previous post', 'bms' ) . '</div><h1>%link</h1></div>', $args['prev_text'] );
-	$next       = get_next_post_link( '<div class="nav-next"><div class="nav-indicator">' . _x( 'Next Post:', 'Next post', 'bms' ) . '</div><h1>%link</h1></div>', $args['next_text'] );
+	$previous   = get_previous_post_link( '<div class="nav-previous">%link</div>', $args['prev_text'] );
+	$next       = get_next_post_link( '<div class="nav-next">%link</div>', $args['next_text'] );
 
 	// Only add markup if there's somewhere to navigate to.
 	if ( $previous || $next ) {
@@ -2310,8 +2310,8 @@ function get_the_posts_pagination( $args = array() ) {
 	if ( $GLOBALS['wp_query']->max_num_pages > 1 ) {
 		$args = wp_parse_args( $args, array(
 			'mid_size'           => 1,
-			'prev_text'          => __( 'Previous' ),
-			'next_text'          => __( 'Next' ),
+			'prev_text'          => _x( 'Previous', 'previous post' ),
+			'next_text'          => _x( 'Next', 'next post' ),
 			'screen_reader_text' => __( 'Posts navigation' ),
 		) );
 
@@ -2362,10 +2362,8 @@ function _navigation_markup( $links, $class = 'posts-navigation', $screen_reader
 
 	$template = '
 	<nav class="navigation %1$s" role="navigation">
-		<div class="post-nav-box clear">
-			<h2 class="screen-reader-text">%2$s</h2>
-			<div class="nav-links">%3$s</div>
-		</div><!-- post-nav-box -->
+		<h2 class="screen-reader-text">%2$s</h2>
+		<div class="nav-links">%3$s</div>
 	</nav>';
 
 	return sprintf( $template, sanitize_html_class( $class ), esc_html( $screen_reader_text ), $links );

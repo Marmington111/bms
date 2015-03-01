@@ -31,7 +31,7 @@ get_header(); ?>
 					echo '<div class="service-thumb">';
 						the_post_thumbnail();
 					echo '</div>';// service-thumb
-					echo '<div clas="service-content">';
+					echo '<div class="service-content">';
 						echo '<h2 class="service-title">';
 							the_title();
 						echo '</h2>';// service-title

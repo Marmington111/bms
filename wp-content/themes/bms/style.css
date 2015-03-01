@@ -448,7 +448,6 @@ input[type="submit"] {
     border-bottom: 3px solid #0D6A9E;*/
     color: #FFF;
     cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-    font-family: 'Robot Slab', serif;
     font-size: 16px;
     font-size: 1rem;
     line-height: 1;
@@ -479,7 +478,7 @@ input[type="submit"]:active {
 	background: #23477D;
 	/*border-bottom: 1px solid #003A7D;
 	border-right: 1px solid #003A7D;*/
-	margin-top: 2px;
+	/*margin-top: 2px;*/
 }
 
 input[type="text"],
@@ -580,6 +579,7 @@ a:active {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	z-index: 100;
 }
 
 .main-navigation li {
@@ -598,7 +598,6 @@ a:active {
 .main-navigation a {
     color: #999;
     display: block;
-    font-family: 'Roboto Slab', serif;
     font-size: 14px;
     font-size: .875rem;
     line-height: 18px;
@@ -606,60 +605,22 @@ a:active {
     text-decoration: none;
 }
 
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 1.5em;
-	left: -999em;
-	z-index: 99999;
-
-
+.main-navigation li a:hover{
+	background:#222;
+	/*color:#fff;*/
 }
 
 .main-navigation ul ul {
-    background: #fff;
-    /*background: hsl(0, 0%, 30%);*/
-    border-top: 2px solid #2c86ba;
+    background: #2c86ba;
+    border-top: 1px solid #333;
     display: none;
     float: left;
     padding: 0;
-    position: absolute;
-    /*left: 0;*/
-    top: inherit;
-    z-index: 99999;
-}
-.main-navigation ul ul ul {
-	background: #efefef;
-	border-top: 2px solid #68C8FF;
-	left: -999em;
-	top: -2px;
-}
-
-.main-navigation ul ul a {
-	line-height: 16px;
-	line-height: 1rem;
-	width: 200px;
-}
-
-.main-navigation ul ul li {
-	float:none;
-}
-
-.main-navigation ul ul li,
-.main-navigation ul ul li:nth-child(1) {
-	border:none;
-}
-
-.main-navigation li:hover > a {
-    
-}
-
-.main-navigation ul ul :hover > a {
-}
-
-.main-navigation ul ul ul a:hover {
-	background:#2c86ba;
+	position: absolute;
+	/*left: inherit;*/
+	/*z-index: 99999;*/
+    /*top: ;*/
+    z-index: 90;
 }
 
 .main-navigation ul li:hover > ul {
@@ -667,51 +628,73 @@ a:active {
 	left: auto;
 }
 
-.main-navigation li a:hover{
-	background:#444;
-	/*color:#fff;*/
+.main-navigation ul ul li {
+	float:none;
+}
+
+.main-navigation ul ul a {
+	color: #fff;
+	line-height: 16px;
+	line-height: 1rem;
+	width: 200px;
+}
+
+.main-navigation li ul a:hover {
+	background: #23477D;
+}
+
+.main-navigation ul ul ul {
+	background: #efefef;
+	border-top: 2px solid #68C8FF;
+	left: -999em;
+	top: -2px;
 }
 
 .main-navigation ul ul li:hover > ul {
 	left: 100%;
 }
 
+.main-navigation ul ul ul a:hover {
+	background:#2c86ba;
+}
+
+
+
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_item > a:hover,
 .main-navigation .current-menu-item > a:hover {
-    /*background:#fff;*/
-    border-top: 4px solid #B296D1;
+    background:#234;
     color:#999;
-	padding-top: 14.2px;
 }
 
 .main-navigation .current_page_ancestor {
-    background: #efefef;
+    background: #444;
 }
 
 .main-navigation .current_page_ancestor a{
-	
+	/*color: red;*/
 }
 
 .main-navigation .current_page_ancestor ul a{
-	background:#fff;
-	color:#999;
+	background: #2c86ba;
+	color: #fff;
 }
 
 .main-navigation .current_page_ancestor ul li:hover a{
-	color:#B8E4FF;
+	color:#333;
+}
 
+.main-navigation ul li li:nth-child(1){
+	border-left: none;
 }
 
 .main-navigation ul ul .current_page_parent,
 .main-navigation .current_page_parent .current_page_item > a,
 .main-navigation ul ul .current_page_parent:hover,
 .main-navigation .current_page_parent .current_page_item:hover > a {
-    color: #fff;
-    color: hsl(0, 0%, 100%);
-    background: #2c86ba;
-    border-top:none;
+    color: #333;
+    background: #FFF;
 } 
 
 /* Small menu. */
@@ -720,23 +703,33 @@ a:active {
 }
 
 @media screen and (max-width: 600px) {
+	.main-navigation .inner-wrap {
+		width: 100%;
+	}
+
 	.menu-toggle {
-        color: white;
+		background: #333;
+		border-left: 1px solid #171717;
+		border-right: 1px solid #171717;
+		box-shadow: inset -1px 0 0 0 rgba(255, 255, 255, 0.065), -1px 0 0 0 rgba(255, 255, 255, 0.065);
+        color: #ccc;
 		display: block;
 		font-size: 14px;
 		font-size: 1.25rem;
-		font-weight: normal;
+		font-weight: 300;
 		height: 2.715em;
 		line-height: 2.715em;
 		/*margin-left: -14px;*/
 		padding: 0px 1em;
 		text-decoration: none;
 	}
+	.menu-toggle:hover,
+	.menu-toggle:focus {
+		background: #222;
+	}
         
 	.main-navigation.toggled .nav-menu {
-		border-top: 1px solid;
-		border-top-color: #fff;
-		border-top-color: hsla(0, 0%, 100%, .5);
+		border-top: 1px solid #fff;
 		display: block;
 	}
 
@@ -747,13 +740,23 @@ a:active {
 
 	.main-navigation li { 
 		float: none; 
+		border: none;
+		box-shadow: none;
+	}
+
+	.main-navigation li:nth-child(1){
+		border-left: none;
+		box-shadow: none;
 	}
 
 	.main-navigation li a { 
+		border-bottom: 1px solid #444;
+		color: #fff;
 		padding: 1.3em 2em; 
 	}
 
 	.main-navigation li li a { 
+		color: #ccc;
 		padding-left: 4em; 
 	}
 
@@ -762,10 +765,13 @@ a:active {
 	}
 
 	.main-navigation li:hover > a {
-		background: #313131;
-		background: hsl(0, 0%, 19%);
+		background: #111;
 	}
 	
+	.main-navigation ul ul {
+		background: #333;
+	}
+
 	.main-navigation ul ul,
 	.main-navigation ul ul ul {
 		position: relative;
@@ -773,15 +779,13 @@ a:active {
 		left: 0;
 		display: block;
 		float: none;
-		background: #313131;
-		background: hsl(0, 0%, 19%);
 	}
 	
 	.main-navigation ul ul a { width: 100%; }
 
 	.main-navigation ul a:hover,
 	.main-navigation ul ul a:hover {
-		background: #443056;
+		background: #222;
     /*background: hsl(0, 0%, 30%);*/
 	}
 
@@ -798,11 +802,37 @@ a:active {
 	.main-navigation .current_page_parent .current_page_item > a  {
 		color: #fff;
 		color: hsl(0, 0%, 100%);
-		background: #443056;
-    /*background: hsl(0, 0%, 30%);*/    
+		/*background: #2C86BA;*/
+	    /*background: hsl(0, 0%, 30%);*/    
 	}
+
+	.main-navigation .current_page_ancestor {
+	    background: #234;
+	}
+
+	.main-navigation .current_page_ancestor ul a{
+		background: #aaa;
+		color: #fff;
+	}
+
+	.main-navigation .current_page_ancestor ul li:hover a{
+		background: #ccc;
+		color: #fff;
+	}
+
+	.main-navigation ul li li:nth-child(1){
+		border-left: none;
+	}
+
+	.main-navigation ul ul .current_page_parent,
+	.main-navigation .current_page_parent .current_page_item > a,
+	.main-navigation ul ul .current_page_parent:hover,
+	.main-navigation .current_page_parent .current_page_item:hover > a {
+	    color: #333;
+	    background: #FFF;
+	} 
         
-} // End responsive menu
+}
 }
 
 .social-nav{
@@ -835,7 +865,7 @@ a:active {
 }
 
 .social-nav li:hover{
-	background:68C8FF;
+	background:#efefef;
 }
 
 .social-nav li a{
@@ -1078,8 +1108,8 @@ X.X Header
 
 .site-title {
     font-weight: 700;
-    font-size: 40px;
-    font-size: 2.5rem;
+    font-size: 32px;
+    font-size: 2rem;
     text-transform: uppercase;
     line-height: normal;
     margin-bottom: 0;
@@ -1110,8 +1140,12 @@ X.X Header
 X.X Header Search 
 --------------------------------------------------------------*/
 .search-toggle {
-	background: #2C86BA;
-    color: #fff;
+	background: #333;
+	border-left: 1px solid #171717;
+	border-right: 1px solid #171717;
+	box-shadow: inset -1px 0 0 0 rgba(255, 255, 255, 0.065), -1px 0 0 0 rgba(255, 255, 255, 0.065);
+	/*box-shadow: inset -1px 0 0 0 rgba(255, 255, 255, 0.065);*/
+    color: #ccc;
     cursor: pointer;
     float: right;
     height: 54px;
@@ -1122,7 +1156,7 @@ X.X Header Search
 
 .search-toggle:hover,
 .search-toggle.active {
-    background: #23477D;
+    background: #222;
 }
 
 @media screen and (max-width: 600px) {
@@ -1146,7 +1180,7 @@ input[type="search"] {
 }
 
 .search-box {
-    background: #23477D;
+    background: #222;
     padding: .5em 0;
 }
 
@@ -1185,7 +1219,6 @@ X.X Header Responsive
 --------------------------------------------------------------*/
 .widget {
 	color:#ccc;
-	font-family:'Roboto Slab', serif;
 	font-size:16px;
 	font-size:1rem;
 	margin: 0 0 2.5em;
@@ -1731,7 +1764,7 @@ blockquote em {
 
 blockquote cite {
     display: block;
-    font-family: 'Roboto Slab', sans-serif;
+  
     font-size: 18px;
     font-size: 1.125rem;
     font-style: normal;
@@ -2482,6 +2515,28 @@ X.X Services
 .service-title {}
 
 .servic-blurb {}
+
+@media screen and (max-width: 879px) {
+	.page-id-11 .a-service {
+		float: none;
+		height: 290px;
+	}
+
+	.service-thumb {
+		float: left;
+		width: 40%;
+	}
+
+	.service-content {
+		float: left;
+		margin-left: 4%;
+		width: 54%;
+	}
+
+	.service-content h2 {
+		margin-top: 0;
+	}
+}
 /*--------------------------------------------------------------
 X.X Contact
 --------------------------------------------------------------*/

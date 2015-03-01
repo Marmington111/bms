@@ -66,7 +66,7 @@
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div class="inner-wrap clearfix">
-					<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'bms' ); ?></button>
+					<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'bms' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 
 					<div class="search-toggle">
@@ -87,7 +87,7 @@
 
 	<div id="content" class="site-content">
 	
-	<?php if ( ! is_front_page() && ! is_search() ) { ?>
+	<?php if ( ! is_front_page() && ! is_search() && ! is_home() && ! is_single() ) { ?>
         <div class="page-title">
             <div class="inner-wrap clearfix">
                 <h2 class="title"><?php echo get_the_title(); ?></h2>
@@ -97,7 +97,7 @@
             </div>
         </div>
     <?php } ?>
-    <?php if ( is_search() ) {?>
+    <?php if ( is_search() ) { ?>
     <div class="page-title">
         <div class="inner-wrap clearfix">
             <h2 class="title"><?php printf( __( 'Search Results for: %s', 'bms' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
@@ -107,3 +107,25 @@
         </div>
     </div>
     <?php } ?>
+    <?php if ( is_home() ) { ?>
+    <div class="page-title">
+        <div class="inner-wrap clearfix">
+            <h2 class="title">News</h2>
+            <p class="breadcrumbs">
+                <a href="index.html">Home</a><i class="fa fa-angle-right"></i><strong>Locations</strong>
+            </p>
+        </div>
+    </div>
+    <?php } ?>
+    <?php if ( is_single() ) { ?>
+    <div class="page-title">
+        <div class="inner-wrap clearfix">
+            <h2 class="title">News</h2>
+            <p class="breadcrumbs">
+                <a href="index.html">Home</a><i class="fa fa-angle-right"></i><strong>Locations</strong>
+            </p>
+        </div>
+    </div>
+    <?php } ?>
+
+
