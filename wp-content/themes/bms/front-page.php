@@ -14,15 +14,15 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
-        	<section class="site-intro">
-        		<div class="inner-wrap">
+        	<section class="site-intro box-container">
+        		<div class="inner-wrap box">
 	           		<?php get_sidebar( 'intro' ); ?>
            		</div><!-- inner-wrap -->
 	        	<div class="triangle"></div><!-- triangle -->
         	</section><!-- site-intro -->
 
-        	<section class="intro-icons-wrap">
-	        	<div class="inner-wrap clearfix">
+        	<section class="intro-icons-wrap box-container">
+	        	<div class="inner-wrap box clearfix">
 	        		<?php get_sidebar( 'icon' ); ?>
 	        	</div><!-- inner-wrap -->
         	</section><!-- intro-icons-wrap -->

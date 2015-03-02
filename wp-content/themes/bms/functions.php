@@ -182,6 +182,8 @@ function bms_scripts() {
 
 	wp_enqueue_script( 'bms-flexslider-settings', get_template_directory_uri() . '/js/flexslider-settings.js', array('bms-flexslider'), '20150122', true );
 
+	wp_enqueue_script( 'bms-scroll-animation', get_template_directory_uri() . '/js/scroll-animation.js', array('jquery'), '20150302', true );
+
 	// wp_enqueue_script( 'bms-accordion-settings', get_template_directory_uri() . '/js/accordion-settings.js', array('jquery'), '20150128', true );
 
 	wp_enqueue_script( 'bms-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20110116', true );

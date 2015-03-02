@@ -1,0 +1,94 @@
+/*
+Theme Name:     Fit WP Child
+Theme URI:      http://themeforest.net/user/DanyDuchaine/portfolio
+Description:    Fit WP Child Theme
+Author:         Dany Duchaine
+Author URI:     http://themeforest.net/user/DanyDuchaine/portfolio
+Template:       FitWP
+Version:        1.0
+*/
+
+/* =Imports styles from thr parent theme
+---------------------------------------------------------*/
+@import url('../FitWP/style.css');
+@import url('../FitWP/stylesheets/superfish.css');
+
+
+/* =Theme customization starts here
+---------------------------------------------------------*/
+em{
+    font-weight:normal;
+}
+
+img{
+    height:auto;
+}
+
+.container .pageContent ul li{
+    list-style:circle outside;
+}
+
+/* Header */
+
+.logo{
+    width:366px;
+    margin-bottom:25px;
+}
+
+.logo span {
+    color: #aeaeae;
+    font-size: 15px;
+    font-family: 'Archivo Narrow';
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    float: left;
+    margin: 39px 15px;
+}
+
+/* Nav */
+
+.mainNav li a {
+color: #c2c2c2;
+font-size: 15px;
+border-right: 1px solid #e1e1e1;
+font-family: 'Archivo Narrow';
+font-style: normal;
+font-weight: 700;
+text-transform: uppercase;
+text-decoration: none;
+margin: 0;
+padding: 67px 25px;
+display: block;
+float: left;
+-webkit-transition: all 60ms ease-in;
+-moz-transition: all 60ms ease-in;
+transition: all 60ms ease-in;
+}
+
+/* indexed alpha png. IE6 gets solid image only */
+}
+.active .sf-sub-indicator {
+    background-position:  0 -7px !important;
+}
+a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+	top:			5.7em;
+	
+}
+
+
+
+/* Media Queries
+==============================================*/
+
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+        @media only screen and (min-width: 768px) and (max-width: 959px) {
+		
+            .children li .text {
+    width: 245px !important;
+}
+.children li .children li .text {
+     width: 145px !important;
+}
+            .logo { width: 140px; }

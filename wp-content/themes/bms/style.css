@@ -2534,7 +2534,31 @@ X.X Services
 	}
 
 	.service-content h2 {
-		margin-top: 0;
+		margin: 0 0 8px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.page-id-11 .a-service {
+		height: auto;
+		padding: 24px 24px 48px;
+	}
+
+	.service-thumb {
+		float: none;
+		margin: 0 auto 16px;
+		width: 100%;
+	}
+
+	.service-content {
+		float: none;
+		margin-left: 0;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.service-content h2 {
+		margin: 0 0 8px;
 	}
 }
 /*--------------------------------------------------------------
