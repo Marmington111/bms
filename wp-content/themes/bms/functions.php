@@ -182,7 +182,7 @@ function bms_scripts() {
 
 	wp_enqueue_script( 'bms-flexslider-settings', get_template_directory_uri() . '/js/flexslider-settings.js', array('bms-flexslider'), '20150122', true );
 
-	wp_enqueue_script( 'bms-scroll-animation', get_template_directory_uri() . '/js/scroll-animation.js', array('jquery'), '20150302', true );
+	// wp_enqueue_script( 'bms-scroll-animation', get_template_directory_uri() . '/js/scroll-animation.js', array('jquery'), '20150302', true );
 
 	// wp_enqueue_script( 'bms-accordion-settings', get_template_directory_uri() . '/js/accordion-settings.js', array('jquery'), '20150128', true );
 
@@ -303,21 +303,71 @@ class bms_example_widget extends WP_Widget {
 add_action('widgets_init', create_function('', 'return register_widget("bms_example_widget");'));
 
 
+/**
+* Breadcrumbs
+*/
+
+function bms_breadcrumb() {
+	if ( ! is_front_page() && ! is_search() && ! is_home() && ! is_single() && ! is_404() ) {
+		echo '<div class="page-title">';
+			echo '<div class="inner-wrap clearfix">';
+			echo '<h2 class="title">';
+				the_title();
+			echo '</h2><ul class="breadcrumbs">';
+			echo '<li><a href="http://www.bodymovementsolutions.com">Home</a></li>';
+			echo '<li><i class="fa fa-angle-right"></i></li>';
+			echo '<li><strong>';
+				the_title();
+			echo '</strong></li>';
+	}
+
+	if ( is_search() ) { 
+		echo '<div class="page-title">';
+			echo '<div class="inner-wrap clearfix">';
+		echo '<h2 class="title">';
+		echo 'Search Results';
+		echo '</h2><ul class="breadcrumbs">';
+		echo '<li><a href="http://www.bodymovementsolutions.com">Home</a></li>';
+		echo '<li><i class="fa fa-angle-right"></i></li>';
+		echo '<li><strong>';
+			echo 'Search';
+		echo '</strong></li>';
+	} elseif ( is_home() && ! is_front_page() ) {
+		echo '<div class="page-title">';
+			echo '<div class="inner-wrap clearfix">';
+			echo '<h2 class="title">';
+			echo 'Blog';
+			echo '</h2><ul class="breadcrumbs">';
+			echo '<li><a href="index.html">Home</a></li>';
+			echo '<li><i class="fa fa-angle-right"></i></li>';
+			echo '<strong>';
+				echo 'Blog';
+			echo '<li></strong></li>';
+	} elseif ( is_front_page() ) {
+		echo '<div class="page-title" style="display:none;">';
+			echo '<div class="inner-wrap clearfix">';
+	} elseif ( is_single() ) {
+		echo '<div class="page-title">';
+			echo '<div class="inner-wrap clearfix">';
+			echo '<h2 class="title">';
+			echo 'Blog Post';
+			echo '</h2><ul class="breadcrumbs">';
+			echo '<li><a href="http://www.bodymovementsolutions.com">Home</a></li>';
+			echo '<li><i class="fa fa-angle-right"></i></li>';
+			echo '<li><a href="http://www.bodymovementsolutions.com/news-2/ style="color:#2c86ba;">Blog</a></li>';
+			echo '<li><i class="fa fa-angle-right"></i></li>';
+			echo '<li><strong>';
+				echo 'Blog Post';
+			echo '</strong></li>';
+	} elseif ( is_404() ) {
+		echo '<div class="page-title">';
+			echo '<div class="inner-wrap clearfix">';
+			echo '<h2 class="title">';
+			echo '404 Error';
+			echo '</h2><p>';
+			echo 'There seems to be a mixup.</p>';
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	}
+		echo '</ul></div></div>';
+}

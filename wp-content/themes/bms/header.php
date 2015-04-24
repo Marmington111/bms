@@ -87,45 +87,7 @@
 
 	<div id="content" class="site-content">
 	
-	<?php if ( ! is_front_page() && ! is_search() && ! is_home() && ! is_single() ) { ?>
-        <div class="page-title">
-            <div class="inner-wrap clearfix">
-                <h2 class="title"><?php echo get_the_title(); ?></h2>
-                <p class="breadcrumbs">
-                    <a href="index.html">Home</a><i class="fa fa-angle-right"></i><strong>Locations</strong>
-                </p>
-            </div>
-        </div>
-    <?php } ?>
-    <?php if ( is_search() ) { ?>
-    <div class="page-title">
-        <div class="inner-wrap clearfix">
-            <h2 class="title"><?php printf( __( 'Search Results for: %s', 'bms' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
-            <p class="breadcrumbs">
-                <a href="index.html">Home</a><i class="fa fa-angle-right"></i><strong>Locations</strong>
-            </p>
-        </div>
-    </div>
-    <?php } ?>
-    <?php if ( is_home() ) { ?>
-    <div class="page-title">
-        <div class="inner-wrap clearfix">
-            <h2 class="title">News</h2>
-            <p class="breadcrumbs">
-                <a href="index.html">Home</a><i class="fa fa-angle-right"></i><strong>Locations</strong>
-            </p>
-        </div>
-    </div>
-    <?php } ?>
-    <?php if ( is_single() ) { ?>
-    <div class="page-title">
-        <div class="inner-wrap clearfix">
-            <h2 class="title">News</h2>
-            <p class="breadcrumbs">
-                <a href="index.html">Home</a><i class="fa fa-angle-right"></i><strong>Locations</strong>
-            </p>
-        </div>
-    </div>
-    <?php } ?>
+	<?php bms_breadcrumb() ?>
+    
 
 

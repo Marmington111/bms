@@ -6,17 +6,17 @@
  */
 
 get_header(); ?>
-<div class="inne-wrap clearfix">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="inner-wrap clearfix">
+	<div id="primary" class="content-area span-twelve clearfix">
+		<main id="main" class="site-main clearfix" role="main">
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'bms' ); ?></h1>
+					<h1><?php _e( 'Sorry! That page can&rsquo;t be found.', 'bms' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'bms' ); ?></p>
+					<p><?php _e( 'The page you were looking for appears to have been moved, deleted or does not exist. Maybe try one of the links below, a search, or return to the <a href="http://www.bodymovementsolutions.com"><strong style="color:#2C86BA; text-decoration:underline;">home</strong></a> page. We apologize for the inconvenience', 'bms' ); ?></p>
 
 					<?php get_search_form(); ?>
 
